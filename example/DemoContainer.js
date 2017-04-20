@@ -3,10 +3,14 @@
  */
 'use strict';
 import React, {Component} from "react";
-import {Button,Input,Spin,Menu,Icon,Checkbox,Table,Radio,DatePicker,Select,Pagination} from 'antd';
+import {Button,Input,Spin,Menu,Icon,Checkbox,Table,Radio,DatePicker,Select,Pagination,message,notification} from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 const { MonthPicker, RangePicker } = DatePicker;
+message.config({duration:1000000});
+notification.config({
+    duration: 300000
+});
 
 import Split from './split';
 import Modal from './modal';
@@ -40,6 +44,27 @@ const children = [];
 for (let i = 10; i < 36; i++) {
     children.push(<Option key={i.toString(36) + i}>{(i.toString(36) + i).repeat(100)}</Option>);
 }
+const success = () => {
+    message.success('This is a message of success');
+};
+
+const error = () => {
+    message.error('This is a message of error');
+};
+
+const warning = () => {
+    message.warning('This is message of warning');
+};
+const info = () => {
+    message.info('This is message of warning');
+};
+
+const openNotificationWithIcon = (type) => {
+    notification[type]({
+        message: 'Notification Title',
+        description: 'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+    });
+};
 
 export default class DemoContainer extends Component{
     render(){
@@ -141,6 +166,18 @@ export default class DemoContainer extends Component{
                 <Pagination showSizeChanger defaultCurrent={3} total={500} showQuickJumper/>
                 <Split/>
                 <Modal/>
+                <Split/>
+                <Button onClick={success}>Success</Button>
+                <Button onClick={error}>Error</Button>
+                <Button onClick={warning}>Warning</Button>
+                <Button onClick={info}>info</Button>
+                <Split/>
+                <div>
+                    <Button onClick={() => openNotificationWithIcon('success')}>Success</Button>
+                    <Button onClick={() => openNotificationWithIcon('info')}>Info</Button>
+                    <Button onClick={() => openNotificationWithIcon('warning')}>Warning</Button>
+                    <Button onClick={() => openNotificationWithIcon('error')}>Error</Button>
+                </div>
             </div>
 
         )

@@ -1,0 +1,29 @@
+@import "~antd/lib/message/style/index";
+.@{message-prefix-cls} {
+  &-notice{
+    &-content{
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+  &-custom-content{
+    padding: 10px 10px 10px 20px;
+    font-size: @font-size-base;
+  }
+  &-success{
+    color: @green-4;
+    background: @green-1;
+  }
+  &-error{
+    color: @red-4;
+    background: @red-1;
+  }
+  &-warning{
+    color: @yellow-4;
+    background: @yellow-1;
+  }
+  &-info{
+    color: @blue-4;
+    background: @blue-1;
+  }
+}
