@@ -52,6 +52,9 @@
         "webpack": "2.X",
         "webpack-dev-server": "2.X"
     },
+    "peerDependencies": {
+        "antd": "^2.9.1"
+    },
     "engines": {
         "node": ">= 5.0.0",
         "npm": ">= 3.0.0"
