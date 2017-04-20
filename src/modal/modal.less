@@ -1,1 +1,49 @@
 @import "~antd/lib/modal/style/index";
+@import "~antd/lib/button/style/mixin";
+
+.@{dialog-prefix-cls} {
+  &-close{
+    right: 20px;
+  }
+  &-header {
+    padding: 14px 20px;
+    border-radius: 2px 2px 0 0;
+    background: @ground-weight-color;
+    border-bottom: 1px solid @border-weight-color;
+  }
+  &-title{
+    font-size: @font-size-base;
+    color: @text-color-secondary;
+  }
+    &-body {
+    padding: 30px 30px 30px 30px;
+
+  }
+    &-footer {
+    border-top: none;
+    padding: 0px 30px 30px 30px;
+    button {
+      line-height: 20px;
+      .button-size(@btn-padding-base; @font-size-base; @btn-border-radius-base);
+    }
+  }
+}
+
+.@{confirm-prefix-cls} {
+  &-body{
+    .@{confirm-prefix-cls}-title {
+      color: @text-color-secondary;
+      font-weight: normal;
+    }
+    .@{confirm-prefix-cls}-content {
+      color: @text-color-secondary;
+    }
+  }
+
+  .@{confirm-prefix-cls}-btns {
+    button {
+      line-height: 20px;
+      .button-size(@btn-padding-base; @font-size-base; @btn-border-radius-base);
+    }
+  }
+}

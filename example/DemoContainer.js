@@ -9,7 +9,7 @@ const MenuItemGroup = Menu.ItemGroup;
 const { MonthPicker, RangePicker } = DatePicker;
 
 import Split from './split';
-
+import Modal from './modal';
 const dataSource = [{
     key: '1',
     name: '胡彦斌',
@@ -140,7 +140,7 @@ export default class DemoContainer extends Component{
 
                 <Pagination showSizeChanger defaultCurrent={3} total={500} showQuickJumper/>
                 <Split/>
-
+                <Modal/>
             </div>
 
         )
