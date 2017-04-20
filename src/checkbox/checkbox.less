@@ -1,0 +1,16 @@
+@import "~antd/lib/checkbox/style/index.less";
+@import "../theme/mtui.less";
+
+@checkbox-prefix-cls: ~"@{ant-prefix}-checkbox";
+.@{checkbox-prefix-cls} {
+  height: 16px;
+  width: 16px;
+  .@{checkbox-prefix-cls}-checked {
+    .@{checkbox-prefix-cls}-inner {
+      &:after {
+        width: 6px;
+        height: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "~antd/lib/select/style/index";
+@import "../theme/mtui.less";
+.@{select-prefix-cls}{
+.@{select-prefix-cls}-selection__choice {
+    border-radius: @border-radius-base;
+    background-color:#eeeeee;
+  }
+}
+.@{select-prefix-cls}-dropdown {
+  &-menu{
+    &-item {
+      &:hover,
+      &-active {
+        background-color: @ground-weight-color;
+      }
+
+      &-disabled {
+        color: @disabled-color;
+        cursor: not-allowed;
+
+        &:hover {
+          color: @disabled-color;
+          background-color: @ground-weight-color;
+          cursor: not-allowed;
+        }
+      }
+
+      &-selected {
+        &,
+        &:hover {
+          background-color: @ground-weight-color;
+          font-weight: normal;
+          color: @text-color;
+        }
+      }
+
+      &-divider {
+        height: 1px;
+        margin: 1px 0;
+        overflow: hidden;
+        background-color: @border-light-color;
+        line-height: 0;
+      }
+    }
+  }
+}

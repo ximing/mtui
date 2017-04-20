@@ -1,0 +1,14 @@
+@import "~antd/lib/input/style/index";
+@import "../theme/mtui.less";
+.active(@color: @outline-color) {
+  border-color: @color;
+  outline: 0;
+  box-shadow:none;
+}
+.@{ant-prefix}-input {
+  color: #333333;
+}
+// == when hoverd
+.hover(@color: @input-hover-border-color) {
+  border-color: ~`colorPalette("@{color}", 5)`;
+}

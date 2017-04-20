@@ -1,0 +1,26 @@
+@import "~antd/lib/button/style/index.less";
+@import "../theme/mtui.less";
+.btn-warning(){
+  .button-variant-primary (@btn-warning-color, @btn-warning-bg);
+}
+
+.btn-success(){
+  .button-variant-primary (@btn-success-color, @btn-success-bg);
+}
+.@{btn-prefix-cls} {
+  &-success {
+    .btn-success;
+  }
+  &-warning {
+    .btn-warning;
+  }
+  &-lg{
+    line-height: 24px;
+  }
+  &{
+    line-height: 20px;
+  }
+  &-sm{
+    line-height: 17px;
+  }
+}

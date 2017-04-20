@@ -1,0 +1,65 @@
+@import "~antd/lib/date-picker/style/index.less";
+.@{calendar-prefix-cls} {
+  .@{calendar-prefix-cls}-month-panel-month{
+    padding: 0px 16px;
+    border-radius: 2px;
+  }
+  .@{calendar-prefix-cls}-year-panel-year{
+    padding: 0px 14px;
+    border-radius: 2px;
+  }
+  &-date {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    line-height: 22px;
+  }
+    .@{calendar-prefix-cls}-selected-day{
+      position: relative;
+      z-index: 1;
+  }
+  &-range{
+    .@{calendar-prefix-cls}-in-range-cell{
+      &:first-child{
+        &:before{
+          content: '';
+          display: block;
+          background: #E7F3FE;
+          border-radius: 0;
+          border: 0;
+          position: absolute;
+          top: 4px;
+          bottom: 4px;
+          left: 0px;
+          right: -15px;
+        }
+      }
+      &:last-child{
+        &:before{
+          content: '';
+          display: block;
+          background: #E7F3FE;
+          border-radius: 0;
+          border: 0;
+          position: absolute;
+          top: 4px;
+          bottom: 4px;
+          left: -15px;
+          right: 0px;
+        }
+      }
+      &:before{
+        content: '';
+        display: block;
+        background: #E7F3FE;
+        border-radius: 0;
+        border: 0;
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        left: -15px;
+        right: -15px;
+      }
+    }
+  }
+}

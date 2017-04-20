@@ -1,0 +1,51 @@
+@import "~antd/lib/pagination/style/index";
+.@{pagination-prefix-cls} {
+  &-item {
+    min-width: 36px;
+    height: 36px;
+    line-height: 36px;
+  }
+  &-prev, &-next, &-jump-prev, &-jump-next{
+    min-width: 36px;
+    height: 36px;
+    line-height: 36px;
+  }
+  &-next a,
+  &-prev a{
+    min-width: 36px;
+    height: 36px;
+    line-height: 36px;
+    &:after{
+      line-height:36px;
+      height: 36px;
+    }
+  }
+
+  &.mini{
+    .@{pagination-prefix-cls}-item {
+      min-width: 24px;
+      height: 24px;
+      line-height: 24px;
+      border: 1px solid @border-color-base;
+      margin-right: 6px;
+    }
+    .@{pagination-prefix-cls}-prev, .@{pagination-prefix-cls}-next,
+    .@{pagination-prefix-cls}-jump-prev, .@{pagination-prefix-cls}-jump-next{
+      min-width: 24px;
+      height: 24px;
+      line-height: 24px;
+      border: 1px solid @border-color-base;
+      margin-right: 6px;
+    }
+    .@{pagination-prefix-cls}-next a,
+    .@{pagination-prefix-cls}-prev a{
+      min-width: 24px;
+      height: 24px;
+      line-height: 24px;
+      &:after{
+        line-height:24px;
+        height: 24px;
+      }
+    }
+  }
+}
