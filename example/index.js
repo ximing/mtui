@@ -2,7 +2,6 @@
  * Created by yeanzhi on 17/4/12.
  */
 'use strict';
-import 'babel-polyfill';
 import '../src/index.less';
 import React, {Component} from "react";
 import rab, {connect, createAction} from 'rabjs/index.js';

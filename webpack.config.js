@@ -1,19 +1,13 @@
 'use strict';
-const {
-    resolve
-} = require('path');
+const {resolve} = require('path');
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        'demo': [
-            'react-hot-loader/patch',
-            'webpack-dev-server/client?http://127.0.0.1:10006/',
-            'webpack/hot/only-dev-server',
-            './example/index.js'
-        ]
+        'demo': ['react-hot-loader/patch', 'webpack-dev-server/client?http://127.0.0.1:10006/', 'webpack/hot/only-dev-server', './example/index.js'],
+        // vendor:['react','react-dom','babel-polyfill','rabjs', 'antd']
     },
     output: {
         filename: '[name].js',
@@ -24,7 +18,10 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
 
     devServer: {
-        contentBase: [path.join(__dirname,'demo'), path.join(__dirname, 'dist')],
+        contentBase: [
+            path.join(__dirname, 'demo'),
+            path.join(__dirname, 'dist')
+        ],
         compress: true,
         port: 10006,
         host: '0.0.0.0',
@@ -52,53 +49,35 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                use:[{
-                    loader: 'babel-loader',
-                    options: {
-                        'presets': [
-                            ['es2015', {
-                                'modules': false
-                            }], 'stage-0', 'react'
-                        ],
-                        'env': {},
-                        'ignore': [
-                            'node_modules/**',
-                            'dist'
-                        ],
-                        'plugins': [
-                            'react-hot-loader/babel',
-                            'transform-decorators-legacy'
-                        ]
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            'presets': [
+                                [
+                                    'es2015', {
+                                        'modules': false
+                                    }
+                                ],
+                                'stage-0',
+                                'react'
+                            ],
+                            'env': {},
+                            'ignore': [
+                                'node_modules/**', 'dist'
+                            ],
+                            'plugins': ['react-hot-loader/babel', 'transform-decorators-legacy']
+                        }
                     }
-                }],
+                ],
                 exclude: /node_modules/
-            },
-            {
+            }, {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader'
-                ]
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'sass-loader'
-                ]
-            },
-            {
+                use: ['style-loader', 'css-loader', 'postcss-loader']
+            }, {
                 test: /\.less$/,
-                use:[
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'less-loader'
-                ]
-            },{
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
+            }, {
                 test: /\.(png|jpg|jpeg|gif|woff|svg|eot|ttf|woff2)$/i,
                 use: ['url-loader']
             }
@@ -111,10 +90,15 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
-        new HtmlWebpackPlugin({
-            title:'test',
-            template:"example/tpl.ejs",
-            inject:false
+        new HtmlWebpackPlugin({title: 'test', template: "example/tpl.ejs", inject: false}),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: "vendor",
+        //     minChunks: Infinity,
+        //     children: true
+        // }),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            manifest: require('./dist/dll/common-manifest.json')
         })
     ]
 };

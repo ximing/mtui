@@ -118,9 +118,9 @@ export default class DemoContainer extends Component{
                 </div>
                 <Split/>
                 <Select style={{width:200}}>
-                    <Option value="jack">Jack</Option>
-                    <Option value="lucy">Lucy</Option>
-                    <Option value="tom">Tom</Option>
+                    <Select.Option value="jack">Jack</Select.Option>
+                    <Select.Option value="lucy">Lucy</Select.Option>
+                    <Select.Option value="tom">Tom</Select.Option>
                 </Select>
                 <Split/>
                 <Select

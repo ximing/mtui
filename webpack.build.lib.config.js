@@ -64,15 +64,6 @@ module.exports = {
                     'postcss-loader',
                     'less-loader'
                 ]
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'sass-loader'
-                ]
             }, {
                 test: /\.(png|jpg|jpeg|gif|woff|svg|eot|ttf|woff2)$/i,
                 use: ['url-loader']
