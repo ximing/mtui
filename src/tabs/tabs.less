@@ -41,8 +41,11 @@
   &&-button &-nav &-tab-disabled {
     background: #EEEEEE;
   }
-    &&-button > &-bar &-tab-active {
+  &&-button > &-bar &-tab-active {
     border: 1px solid @primary-color;
+    &:last-child{
+      border: 1px solid @primary-color;
+    }
   }
   &&-button &-ink-bar-animated{
     display: none !important;
