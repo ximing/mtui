@@ -1,13 +1,30 @@
 {
-  "presets": [ "es2015", "stage-0", "react"],
+  "presets": [
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    "stage-0",
+    "react"
+  ],
   "env": {
   },
   "ignore": [
     "node_modules/**",
     "dist"
   ],
-  "plugins": ["transform-decorators-legacy","transform-export-extensions",["import", {
-    "libraryName": "antd",
-    "libraryDirectory": "lib"
-  }]]
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-decorators-legacy",
+    "transform-export-extensions",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "lib"
+      }
+    ]
+  ]
 }

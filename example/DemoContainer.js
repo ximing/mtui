@@ -14,6 +14,7 @@ notification.config({
 
 import Split from './split';
 import Modal from './modal';
+import Alert from './alert';
 const dataSource = [{
     key: '1',
     name: '胡彦斌',
@@ -178,6 +179,8 @@ export default class DemoContainer extends Component{
                     <Button onClick={() => openNotificationWithIcon('warning')}>Warning</Button>
                     <Button onClick={() => openNotificationWithIcon('error')}>Error</Button>
                 </div>
+                <Split/>
+                <Alert/>
             </div>
 
         )

@@ -3,6 +3,7 @@ const {resolve} = require('path');
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HappyPack = require('happypack');
 
 module.exports = {
     entry: {
@@ -49,34 +50,14 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            'presets': [
-                                [
-                                    'es2015', {
-                                        'modules': false
-                                    }
-                                ],
-                                'stage-0',
-                                'react'
-                            ],
-                            'env': {},
-                            'ignore': [
-                                'node_modules/**', 'dist'
-                            ],
-                            'plugins': ['react-hot-loader/babel', 'transform-decorators-legacy']
-                        }
-                    }
-                ],
+                use:  ['happypack/loader?id=js'],
                 exclude: /node_modules/
             }, {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader']
             }, {
                 test: /\.less$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
+                use:  ['happypack/loader?id=less']
             }, {
                 test: /\.(png|jpg|jpeg|gif|woff|svg|eot|ttf|woff2)$/i,
                 use: ['url-loader']
@@ -91,14 +72,22 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new HtmlWebpackPlugin({title: 'test', template: "example/tpl.ejs", inject: false}),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: "vendor",
-        //     minChunks: Infinity,
-        //     children: true
-        // }),
         new webpack.DllReferencePlugin({
             context: __dirname,
             manifest: require('./dist/dll/common-manifest.json')
-        })
+        }),
+        new HappyPack({
+            id: 'js',
+            threads: 2,
+            tempDir:'./node_modules/.happypack/',
+            loaders: [ 'babel-loader' ]
+        }),
+        new HappyPack({
+            id: 'less',
+            threads: 2,
+            tempDir:'./node_modules/.happypack/',
+            loaders: ['style-loader',
+                'css-loader','postcss-loader','less-loader']
+        }),
     ]
 };
