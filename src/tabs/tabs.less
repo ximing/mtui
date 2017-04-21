@@ -1,4 +1,60 @@
 @import "~antd/lib/tabs/style/index";
 @import "../theme/mtui.less";
+
 .@{tab-prefix-cls} {
+  &-nav &-tab {
+    font-size: @font-size-base;
+    padding: 8px 24px 4px 24px;
+  }
+  &-extra-content {
+    position: relative;
+  }
+  &&-card > &-bar &-tab {
+    background: @ground-weight-color;
+    color: @text-color-secondary;
+    border-radius: 0;
+    &:hover {
+      color: @primary-color;
+    }
+  }
+  &-nav &-tab-disabled {
+    cursor: not-allowed;
+  }
+  &&-card > &-bar &-tab {
+    padding: 8px 25px;
+  }
+  &&-card > &-bar &-tab-active {
+    color: @primary-color;
+    background: #FFFFFF;
+  }
+  &&-button > &-bar &-tab {
+    padding: 8px 25px;
+    background: #FFFFFF;
+    border-radius: 2px 0 0 2px;
+    margin-right: 0px;
+    border: 1px solid @border-color-base;
+    border-right:none;
+    &:last-child{
+      border-right: 1px solid @border-color-base;
+    }
+  }
+  &&-button &-nav &-tab-disabled {
+    background: #EEEEEE;
+  }
+    &&-button > &-bar &-tab-active {
+    border: 1px solid @primary-color;
+  }
+  &&-button &-ink-bar-animated{
+    display: none !important;
+  }
+  &&-button &-bar{
+    border: none;
+  }
+  &&-button &-nav-wrap{
+    margin-bottom: 0;
+  }
+  &&-mini&&-button &-bar &-tab{
+    padding: 3px 16px;
+    font-size: @font-size-sm;
+  }
 }

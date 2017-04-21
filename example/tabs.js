@@ -8,14 +8,14 @@ const TabPane = Tabs.TabPane;
 function callback(key) {
     console.log(key);
 }
-const operations = <Button>Extra Action</Button>;
+const operations = <Button size='small'>Extra Action</Button>;
 
 export default function () {
     return(
-        <div>
+        <div style={{width:500}}>
             <Tabs defaultActiveKey="1" onChange={callback}>
                 <TabPane tab="Tab 1" key="1">Content of Tab Pane 1</TabPane>
-                <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
+                <TabPane tab="Tab 2" key="2" disabled>Content of Tab Pane 2</TabPane>
                 <TabPane tab="Tab 3" key="3">Content of Tab Pane 3</TabPane>
             </Tabs>
             <br/>
@@ -51,8 +51,20 @@ export default function () {
             <br/>
             <Tabs onChange={callback} type="card">
                 <TabPane tab="Tab 1" key="1">Content of Tab Pane 1</TabPane>
-                <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
+                <TabPane tab="Tab 2" key="2" disabled>Content of Tab Pane 2</TabPane>
                 <TabPane tab="Tab 3" key="3">Content of Tab Pane 3</TabPane>
+            </Tabs>
+            <Tabs onChange={callback} type="button">
+                <TabPane tab="Tab 1" key="1">Content of Tab Pane 1</TabPane>
+                <TabPane tab="Tab 2" key="2" disabled>Content of Tab Pane 2</TabPane>
+                <TabPane tab="Tab 3" key="3">Content of Tab Pane 3</TabPane>
+            </Tabs>
+            <Tabs onChange={callback} type="button"  size="small">
+                <TabPane tab="Tab 1" key="1">Content of Tab Pane 1</TabPane>
+                <TabPane tab="Tab 2" key="2" disabled>Content of Tab Pane 2</TabPane>
+                <TabPane tab="Tab 3" key="3">Content of Tab Pane 3</TabPane>
+                <TabPane tab="Tab 4" key="4">Content of Tab Pane 3</TabPane>
+                <TabPane tab="Tab 5" key="5">Content of Tab Pane 3</TabPane>
             </Tabs>
         </div>
     )
