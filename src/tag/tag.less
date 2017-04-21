@@ -1,0 +1,24 @@
+@import "~antd/lib/tag/style/index";
+@import "../theme/mtui.less";
+.@{tag-prefix-cls} {
+  border: 1px solid @border-color-base;
+  border-radius: 12px;
+  padding: 0 16px;
+  height: 24px;
+  line-height: 22px;
+  background: #FFFFFF;
+  font-size: @font-size-sm;
+  color: @text-color-secondary;
+  &:hover {
+    border: 1px solid @primary-color;
+    color: @primary-color;
+  }
+  &-has-color{
+    border:none;
+    color: #FFFFFF;
+    &:hover {
+      border:none;
+      color: #FFFFFF;
+    }
+  }
+}

@@ -17,6 +17,7 @@ import Modal from './modal';
 import Alert from './alert';
 import Tab from './tabs';
 import Tooltip from './tooltip';
+import Tag from './tag';
 
 const dataSource = [{
     key: '1',
@@ -188,6 +189,10 @@ export default class DemoContainer extends Component{
                 <Tab/>
                 <Split/>
                 <Tooltip/>
+                <Split/>
+                <Tag/>
+                <Split/>
+
             </div>
 
         )
