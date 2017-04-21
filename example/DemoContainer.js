@@ -15,6 +15,7 @@ notification.config({
 import Split from './split';
 import Modal from './modal';
 import Alert from './alert';
+import Tab from './tabs';
 const dataSource = [{
     key: '1',
     name: '胡彦斌',
@@ -181,6 +182,8 @@ export default class DemoContainer extends Component{
                 </div>
                 <Split/>
                 <Alert/>
+                <Split/>
+                <Tab/>
             </div>
 
         )
