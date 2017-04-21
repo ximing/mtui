@@ -99,6 +99,12 @@ export default class DemoContainer extends Component{
                 <div>
                     <Input/>
                     <Split/>
+
+                    <Input size="small"/>
+                    <Split/>
+
+                    <Input size="large"/>
+                    <Split/>
                     <Input type="textarea" placeholder="Autosize height with minimum and maximum number of lines" autosize={{ minRows: 2, maxRows: 6 }} />
                 </div>
                 <div>
@@ -140,11 +146,11 @@ export default class DemoContainer extends Component{
                     </Menu>
                 </div>
                 <div>
-                    <DatePicker />
+                    <DatePicker size="small"/>
                     <br />
                     <MonthPicker placeholder="Select month" />
                     <br />
-                    <RangePicker />
+                    <RangePicker size="small"/>
                 </div>
                 <Split/>
                 <Select style={{width:200}}>
