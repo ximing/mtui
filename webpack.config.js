@@ -53,9 +53,6 @@ module.exports = {
                 use: ['happypack/loader?id=js'],
                 exclude: /node_modules/
             }, {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader']
-            }, {
                 test: /\.less$/,
                 use: ['happypack/loader?id=less']
             }, {

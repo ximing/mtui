@@ -7,7 +7,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        common:['react','react-dom','babel-polyfill','rabjs', 'antd']
+        common:['react','react-dom','babel-polyfill','rabjs']
     },
     output: {
         path: path.join(__dirname, './dist', 'dll'),

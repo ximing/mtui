@@ -15,6 +15,7 @@ function getDirectories (srcpath) {
 }
 let entry = {};
 getDirectories('./src-lib').forEach(item=>{
+    // entry[`${item}/style/index.css`] = `./src-lib/${item}/style/index.less`;
     entry[`${item}/style/index.css`] = `./src-lib/${item}/style/index.less`;
 })
 module.exports = {
@@ -25,7 +26,7 @@ module.exports = {
         path: resolve(__dirname, 'lib'),
         publicPath: '/lib'
     },
-    devtool: 'cheap-module-source-map',
+    // devtool: 'cheap-module-source-map',
 
     performance: {
         hints: false
