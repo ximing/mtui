@@ -1,6 +1,6 @@
 {
     "name": "mtui-d",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "A new React project",
     "author": "",
     "main": "./src/index.less",
