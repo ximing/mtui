@@ -1,6 +1,6 @@
 {
     "name": "mtui-d",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "A new React project",
     "author": "",
     "main": "./lib",
@@ -13,7 +13,6 @@
     "keywords": [],
     "license": "ISC",
     "devDependencies": {
-        "antd": "^2.9.2",
         "autoprefixer": "6.x",
         "babel-core": "6.x",
         "babel-eslint": "6.x",
@@ -59,5 +58,6 @@
         "npm": ">= 3.0.0"
     },
     "dependencies": {
+        "antd": "^2.9.2"
     }
 }
