@@ -1,6 +1,6 @@
 {
     "name": "mtui-d",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "description": "A new React project",
     "author": "",
     "main": "./lib",
@@ -14,6 +14,7 @@
     "license": "MIT",
     "files": [
         "lib",
+        "dist",
         "src"
     ],
     "devDependencies": {

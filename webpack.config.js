@@ -21,7 +21,8 @@ module.exports = {
     devServer: {
         contentBase: [
             path.join(__dirname, 'demo'),
-            path.join(__dirname, 'dist')
+            path.join(__dirname, 'dist'),
+            path.join(__dirname, 'example')
         ],
         compress: true,
         port: 10006,
@@ -76,7 +77,7 @@ module.exports = {
         new HtmlWebpackPlugin({title: 'test', template: "example/tpl.ejs", inject: false}),
         new webpack.DllReferencePlugin({
             context: __dirname,
-            manifest: require('./dist/dll/common-manifest.json')
+            manifest: require('./example/dll/common-manifest.json')
         }),
         new HappyPack({
             id: 'js',
