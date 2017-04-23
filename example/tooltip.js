@@ -4,7 +4,7 @@
 'use strict';
 import React from 'react';
 
-import { Tooltip } from 'antd';
+import { Tooltip } from 'mtui-d';
 const text = <span>prompt text</span>;
 export default function () {
     return(

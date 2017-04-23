@@ -1,5 +1,5 @@
 'use strict';
-const {resolve} = require('path');
+const {resolve, join} = require('path');
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -50,14 +50,14 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                use:  ['happypack/loader?id=js'],
+                use: ['happypack/loader?id=js'],
                 exclude: /node_modules/
             }, {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader']
             }, {
                 test: /\.less$/,
-                use:  ['happypack/loader?id=less']
+                use: ['happypack/loader?id=less']
             }, {
                 test: /\.(png|jpg|jpeg|gif|woff|svg|eot|ttf|woff2)$/i,
                 use: ['url-loader']
@@ -67,6 +67,11 @@ module.exports = {
     externals: {
         jquery: 'jQuery',
         lodash: '_'
+    },
+    resolve: {
+        alias: {
+            'mtui-d': join(__dirname, './lib')
+        }
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -79,15 +84,15 @@ module.exports = {
         new HappyPack({
             id: 'js',
             threads: 2,
-            tempDir:'./node_modules/.happypack/',
-            loaders: [ 'babel-loader' ]
+            tempDir: './node_modules/.happypack/',
+            loaders: ['babel-loader']
         }),
         new HappyPack({
             id: 'less',
             threads: 2,
-            tempDir:'./node_modules/.happypack/',
+            tempDir: './node_modules/.happypack/',
             loaders: ['style-loader',
-                'css-loader','postcss-loader','less-loader']
+                'css-loader', 'postcss-loader', 'less-loader']
         }),
     ]
 };
