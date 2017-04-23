@@ -3,25 +3,27 @@
  */
 'use strict';
 const {
-    resolve
+    resolve,join
 } = require('path');
 const webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var node_modules = resolve(__dirname, 'node_modules');
-var pathToReact = resolve(node_modules, 'react/dist/react.min.js');
-
+var fs = require('fs');
+function getDirectories (srcpath) {
+    return fs.readdirSync(srcpath)
+        .filter(file => fs.statSync(join(srcpath, file)).isDirectory())
+}
+let entry = {};
+getDirectories('./src-lib').forEach(item=>{
+    entry[`${item}/style/index.css`] = `./src-lib/${item}/style/index.less`;
+})
 module.exports = {
-    entry: {
-        'mtui': [
-            './src/index.js'
-        ]
-    },
+    entry: entry,
     output: {
-        filename: '[name].js',
+        filename: '[name]',
         sourceMapFilename: '[file].map',
-        path: resolve(__dirname, 'dist'),
-        publicPath: '/dist',
-        library: 'mtui',
-        libraryTarget: 'umd'
+        path: resolve(__dirname, 'lib'),
+        publicPath: '/lib'
     },
     devtool: 'cheap-module-source-map',
 
@@ -54,16 +56,21 @@ module.exports = {
             },
             {
                 test:/\.css$/,
-                use: ['style-loader','css-loader','postcss-loader']
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: ['css-loader','postcss-loader']
+                })
             },
             {
                 test: /\.less$/,
-                use:[
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'less-loader'
-                ]
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: [
+                        'css-loader',
+                        'postcss-loader',
+                        'less-loader'
+                    ]
+                })
             }, {
                 test: /\.(png|jpg|jpeg|gif|woff|svg|eot|ttf|woff2)$/i,
                 use: ['url-loader']
@@ -87,7 +94,10 @@ module.exports = {
         }
     ],
     plugins: [
-        new webpack.NamedModulesPlugin(),
+        new ExtractTextPlugin({
+            filename: '[name]',
+            allChunks: true
+        }),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify('production')

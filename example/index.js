@@ -2,7 +2,7 @@
  * Created by yeanzhi on 17/4/12.
  */
 'use strict';
-import '../src/index.less';
+// import '../src/index.less';
 import React, {Component} from "react";
 import rab, {connect, createAction} from 'rabjs/index.js';
 import {Router, Route} from 'rabjs/router';
