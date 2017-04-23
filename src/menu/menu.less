@@ -1,0 +1,18 @@
+@import "~antd/lib/menu/style/index";
+.@{menu-prefix-cls} {
+  color: @text-color-secondary;
+  &-dark{
+    background:@dark-5;
+  }
+  &-dark&-horizontal{
+    border-bottom-color:@dark-5;
+  }
+  &-inline &-item:after{
+    //display: none;
+    left: 1px;
+    right:auto;
+  }
+  &-inline &-item{
+    left: 0;
+  }
+}
