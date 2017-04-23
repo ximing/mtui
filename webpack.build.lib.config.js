@@ -18,6 +18,8 @@ getDirectories('./src-lib').forEach(item=>{
     // entry[`${item}/style/index.css`] = `./src-lib/${item}/style/index.less`;
     entry[`${item}/style/index.css`] = `./src-lib/${item}/style/index.less`;
 })
+entry[`style/index.css`] = `./src-lib/style/index.less`;
+
 module.exports = {
     entry: entry,
     output: {

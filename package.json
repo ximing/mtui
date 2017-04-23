@@ -1,6 +1,6 @@
 {
     "name": "mtui-d",
-    "version": "1.2.3",
+    "version": "1.2.5",
     "description": "A new React project",
     "author": "",
     "main": "./lib",
@@ -11,7 +11,11 @@
         "buildlib": "webpack --config webpack.build.lib.config.js"
     },
     "keywords": [],
-    "license": "ISC",
+    "license": "MIT",
+    "files": [
+        "lib",
+        "src"
+    ],
     "devDependencies": {
         "autoprefixer": "6.x",
         "babel-core": "6.x",
