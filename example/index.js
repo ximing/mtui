@@ -6,7 +6,8 @@
 import React, {Component} from "react";
 import rab, {connect, createAction} from 'rabjs/index.js';
 import {Router, Route} from 'rabjs/router';
-// import DemoContainer from './DemoContainer';
+import DemoContainer from './DemoContainer';
+import '../src/index.less';
 import Tag from './tag';
 const app = rab({
     debug:true
@@ -15,7 +16,7 @@ const app = rab({
 app.router(({history}) => {
     return (
         <Router history={history}>
-            <Route path="/*" component={Tag} />
+            <Route path="/*" component={DemoContainer} />
         </Router>
     );
 });

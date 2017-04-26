@@ -3,7 +3,7 @@
  */
 'use strict';
 import React from 'react';
-import { Alert } from 'mtui-d';
+import { Alert } from 'antd';
 
 export default function (){
     return(

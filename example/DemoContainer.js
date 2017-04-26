@@ -4,11 +4,11 @@
 'use strict';
 import React, {Component} from "react";
 import {Button,Input,Spin,Menu,Icon,Checkbox,Table,Radio,
-DatePicker,Select,Pagination,message,notification} from 'mtui-d';
+DatePicker,Select,Pagination,message,notification} from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 const { MonthPicker, RangePicker } = DatePicker;
-import { Layout,Breadcrumb } from 'mtui-d';
+import { Layout,Breadcrumb } from 'antd';
 const { Header, Content, Sider } = Layout;
 message.config({duration:1000000});
 notification.config({

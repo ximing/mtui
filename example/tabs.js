@@ -3,7 +3,7 @@
  */
 'use strict';
 import React, {Component} from 'react';
-import { Tabs, Button} from 'mtui-d';
+import { Tabs, Button} from 'antd';
 const TabPane = Tabs.TabPane;
 function callback(key) {
     console.log(key);

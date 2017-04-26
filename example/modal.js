@@ -3,7 +3,7 @@
  */
 'use strict';
 import React from 'react';
-import { Modal, Button } from 'mtui-d';
+import { Modal, Button } from 'antd';
 
 function info() {
     Modal.info({

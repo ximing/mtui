@@ -19,7 +19,7 @@
     [
       "import",
       {
-        "libraryName": "mtui-d",
+        "libraryName": "antd",
         "libraryDirectory": "lib",
         "style":true
       }

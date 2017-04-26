@@ -3,7 +3,7 @@
  */
 'use strict';
 import React from "react";
-import { Tag } from 'mtui-d';
+import { Tag } from 'antd';
 // import Tag from '../lib/tag'
 // import '../lib/tag/style'
 function log(e) {

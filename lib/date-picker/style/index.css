@@ -4935,9 +4935,6 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
   top: 0;
   height: 248px;
 }
-.ant-calendar-picker input {
-  line-height: 36px;
-}
 .ant-calendar .ant-calendar-month-panel-month {
   padding: 0px 16px;
   border-radius: 2px;
