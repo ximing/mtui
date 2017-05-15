@@ -3,7 +3,7 @@
   src: local("Helvetica Neue");
   unicode-range: U+30-39;
 }
-/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -21,6 +21,12 @@ html {
 }
 /* Sections
    ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
 /**
  * Add the correct display in IE 9-.
  */
@@ -199,14 +205,22 @@ svg:not(:root) {
 /* Forms
    ========================================================================== */
 /**
- * Remove the margin in Firefox and Safari.
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
  */
 button,
 input,
 optgroup,
 select,
 textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
   margin: 0;
+  /* 2 */
 }
 /**
  * Show the overflow in IE.
@@ -256,6 +270,12 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
 }
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -1357,6 +1377,9 @@ samp {
 }
 .anticon-shake:before {
   content: "\E94F";
+}
+.anticon-fork:before {
+  content: "\E6F2";
 }
 .anticon-spin:before {
   display: inline-block;
@@ -3076,10 +3099,13 @@ samp {
 }
 .ant-radio-disabled .ant-radio-inner {
   border-color: #dddddd !important;
-  background-color: #f3f3f3;
+  background-color: #F8F8F8;
 }
 .ant-radio-disabled .ant-radio-inner:after {
   background-color: #ccc;
+}
+.ant-radio-disabled .ant-radio-input {
+  cursor: not-allowed;
 }
 .ant-radio-disabled + span {
   color: #999999;

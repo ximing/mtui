@@ -3,7 +3,7 @@
   src: local("Helvetica Neue");
   unicode-range: U+30-39;
 }
-/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -21,6 +21,12 @@ html {
 }
 /* Sections
    ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
 /**
  * Add the correct display in IE 9-.
  */
@@ -199,14 +205,22 @@ svg:not(:root) {
 /* Forms
    ========================================================================== */
 /**
- * Remove the margin in Firefox and Safari.
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
  */
 button,
 input,
 optgroup,
 select,
 textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
   margin: 0;
+  /* 2 */
 }
 /**
  * Show the overflow in IE.
@@ -256,6 +270,12 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
 }
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -1357,6 +1377,9 @@ samp {
 }
 .anticon-shake:before {
   content: "\E94F";
+}
+.anticon-fork:before {
+  content: "\E6F2";
 }
 .anticon-spin:before {
   display: inline-block;
@@ -3483,21 +3506,30 @@ textarea.ant-input {
 }
 .ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selection,
 .ant-input-group.ant-input-group-compact > .ant-calendar-picker .ant-input,
-.ant-input-group.ant-input-group-compact > .ant-select-auto-complete .ant-input {
+.ant-input-group.ant-input-group-compact > .ant-select-auto-complete .ant-input,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker .ant-input,
+.ant-input-group.ant-input-group-compact > .ant-mention-wrapper .ant-mention-editor,
+.ant-input-group.ant-input-group-compact > .ant-time-picker .ant-time-picker-input {
   border-radius: 0;
   border-right-width: 0;
 }
 .ant-input-group.ant-input-group-compact > *:first-child,
 .ant-input-group.ant-input-group-compact > .ant-select:first-child > .ant-select-selection,
 .ant-input-group.ant-input-group-compact > .ant-calendar-picker:first-child .ant-input,
-.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:first-child .ant-input {
+.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:first-child .ant-input,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker:first-child .ant-input,
+.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:first-child .ant-mention-editor,
+.ant-input-group.ant-input-group-compact > .ant-time-picker:first-child .ant-time-picker-input {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
 .ant-input-group.ant-input-group-compact > *:last-child,
 .ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selection,
 .ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input,
-.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input {
+.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input,
+.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor,
+.ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border-right-width: 1px;
@@ -3600,9 +3632,8 @@ textarea.ant-input {
   font-size: 14px;
   color: #999999;
   width: 14px;
-  height: 14px;
-  margin-top: -7px;
-  line-height: 14px;
+  height: 12px;
+  margin-top: -6px;
   cursor: pointer;
   -webkit-transition: color 0.3s, opacity 0.3s;
   transition: color 0.3s, opacity 0.3s;
@@ -3665,6 +3696,7 @@ textarea.ant-input {
   outline: 0;
   height: 22px;
   color: #333333;
+  background: #fff;
 }
 .ant-calendar-week-number {
   width: 286px;
@@ -3830,13 +3862,13 @@ textarea.ant-input {
 .ant-calendar-disabled-cell .ant-calendar-date {
   cursor: not-allowed;
   color: #bcbcbc;
-  background: #f3f3f3;
+  background: #F8F8F8;
   border-radius: 0;
   width: auto;
   border: 1px solid transparent;
 }
 .ant-calendar-disabled-cell .ant-calendar-date:hover {
-  background: #f3f3f3;
+  background: #F8F8F8;
 }
 .ant-calendar-disabled-cell-first-of-row .ant-calendar-date {
   border-top-left-radius: 4px;
@@ -4100,7 +4132,6 @@ textarea.ant-input {
   background-color: transparent;
   border: 0;
   height: 100%;
-  line-height: 100%;
   outline: 0;
   width: 43%;
   text-align: center;
@@ -4403,17 +4434,18 @@ div.ant-calendar-range-quick-selector > a {
 .ant-calendar-time-picker-combobox {
   width: 100%;
 }
-.ant-calendar-time-picker-1-column,
-.ant-calendar-time-picker-1-column .ant-calendar-time-picker-select {
+.ant-calendar-time-picker-column-1,
+.ant-calendar-time-picker-column-1 .ant-calendar-time-picker-select {
   width: 100%;
 }
-.ant-calendar-time-picker-2-columns .ant-calendar-time-picker-select {
+.ant-calendar-time-picker-column-2 .ant-calendar-time-picker-select {
   width: 50%;
 }
-.ant-calendar-time-picker-1-column .ant-calendar-time-picker-select li,
-.ant-calendar-time-picker-2-columns .ant-calendar-time-picker-select li {
-  padding: 0;
-  text-align: center;
+.ant-calendar-time-picker-column-3 .ant-calendar-time-picker-select {
+  width: 33.33%;
+}
+.ant-calendar-time-picker-column-4 .ant-calendar-time-picker-select {
+  width: 25%;
 }
 .ant-calendar-time-picker-input-wrap {
   display: none;
@@ -4421,11 +4453,8 @@ div.ant-calendar-range-quick-selector > a {
 .ant-calendar-time-picker-select {
   float: left;
   font-size: 14px;
-  border: 1px solid #dddddd;
-  border-width: 0 1px;
-  margin-left: -1px;
+  border-right: 1px solid #dddddd;
   box-sizing: border-box;
-  width: 33.6%;
   overflow: hidden;
   position: relative;
   height: 206px;
@@ -4449,7 +4478,7 @@ div.ant-calendar-range-quick-selector > a {
   max-height: 206px;
 }
 .ant-calendar-time-picker-select li {
-  padding: 0 0 0 28px;
+  text-align: center;
   list-style: none;
   box-sizing: content-box;
   margin: 0;
@@ -4633,7 +4662,7 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 .ant-calendar-month-panel-cell-disabled .ant-calendar-month-panel-month:hover {
   cursor: not-allowed;
   color: #bcbcbc;
-  background: #f3f3f3;
+  background: #F8F8F8;
 }
 .ant-calendar-month-panel-month {
   display: inline-block;
@@ -5097,7 +5126,7 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
   list-style: none;
   box-sizing: content-box;
   margin: 0;
-  padding: 0 0 0 16px;
+  padding: 0 0 0 8px;
   width: 100%;
   height: 24px;
   line-height: 24px;
@@ -5107,8 +5136,8 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-transition: background 0.3s ease;
-  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 .ant-time-picker-panel-select li:hover {
   background: #ecf6fd;
@@ -5116,6 +5145,9 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 li.ant-time-picker-panel-select-option-selected {
   background: #f7f7f7;
   font-weight: bold;
+}
+li.ant-time-picker-panel-select-option-selected:hover {
+  background: #f7f7f7;
 }
 li.ant-time-picker-panel-select-option-disabled {
   color: rgba(0, 0, 0, 0.25);

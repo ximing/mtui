@@ -3,7 +3,7 @@
   src: local("Helvetica Neue");
   unicode-range: U+30-39;
 }
-/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -21,6 +21,12 @@ html {
 }
 /* Sections
    ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
 /**
  * Add the correct display in IE 9-.
  */
@@ -199,14 +205,22 @@ svg:not(:root) {
 /* Forms
    ========================================================================== */
 /**
- * Remove the margin in Firefox and Safari.
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
  */
 button,
 input,
 optgroup,
 select,
 textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
   margin: 0;
+  /* 2 */
 }
 /**
  * Show the overflow in IE.
@@ -256,6 +270,12 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
 }
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -1357,6 +1377,9 @@ samp {
 }
 .anticon-shake:before {
   content: "\E94F";
+}
+.anticon-fork:before {
+  content: "\E6F2";
 }
 .anticon-spin:before {
   display: inline-block;
@@ -3020,22 +3043,22 @@ samp {
 .ant-popover-placement-top,
 .ant-popover-placement-topLeft,
 .ant-popover-placement-topRight {
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 .ant-popover-placement-right,
 .ant-popover-placement-rightTop,
 .ant-popover-placement-rightBottom {
-  padding-left: 4px;
+  padding-left: 8px;
 }
 .ant-popover-placement-bottom,
 .ant-popover-placement-bottomLeft,
 .ant-popover-placement-bottomRight {
-  padding-top: 4px;
+  padding-top: 8px;
 }
 .ant-popover-placement-left,
 .ant-popover-placement-leftTop,
 .ant-popover-placement-leftBottom {
-  padding-right: 4px;
+  padding-right: 8px;
 }
 .ant-popover-inner {
   background-color: #fff;
@@ -3050,7 +3073,7 @@ samp {
   line-height: 32px;
   height: 32px;
   border-bottom: 1px solid #e9e9e9;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(0, 0, 0, 0.65);
   font-weight: 500;
 }
 .ant-popover-inner-content {
@@ -3098,7 +3121,7 @@ samp {
 .ant-popover-placement-topRight > .ant-popover-content > .ant-popover-arrow {
   border-bottom-width: 0;
   border-top-color: rgba(217, 217, 217, 0.7);
-  bottom: -1px;
+  bottom: 3px;
 }
 .ant-popover-placement-top > .ant-popover-content > .ant-popover-arrow:after,
 .ant-popover-placement-topLeft > .ant-popover-content > .ant-popover-arrow:after,
@@ -3122,7 +3145,7 @@ samp {
 .ant-popover-placement-right > .ant-popover-content > .ant-popover-arrow,
 .ant-popover-placement-rightTop > .ant-popover-content > .ant-popover-arrow,
 .ant-popover-placement-rightBottom > .ant-popover-content > .ant-popover-arrow {
-  left: -1px;
+  left: 3px;
   border-left-width: 0;
   border-right-color: rgba(217, 217, 217, 0.7);
 }
@@ -3150,7 +3173,7 @@ samp {
 .ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
   border-top-width: 0;
   border-bottom-color: rgba(217, 217, 217, 0.7);
-  top: -1px;
+  top: 3px;
 }
 .ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow:after,
 .ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow:after,
@@ -3174,7 +3197,7 @@ samp {
 .ant-popover-placement-left > .ant-popover-content > .ant-popover-arrow,
 .ant-popover-placement-leftTop > .ant-popover-content > .ant-popover-arrow,
 .ant-popover-placement-leftBottom > .ant-popover-content > .ant-popover-arrow {
-  right: -1px;
+  right: 3px;
   border-right-width: 0;
   border-left-color: rgba(217, 217, 217, 0.7);
 }
