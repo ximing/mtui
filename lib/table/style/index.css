@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
-}
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -396,6 +391,11 @@ template {
 [hidden] {
   display: none;
 }
+@font-face {
+  font-family: "Helvetica Neue For Number";
+  src: local("Helvetica Neue");
+  unicode-range: U+30-39;
+}
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -481,6 +481,14 @@ input::-ms-reveal {
 ::selection {
   background: #118BFB;
   color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
 }
 a {
   color: #118BFB;
@@ -1409,12 +1417,14 @@ samp {
           animation-name: antFadeIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .fade-leave.fade-leave-active {
   -webkit-animation-name: antFadeOut;
           animation-name: antFadeOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .fade-enter,
 .fade-appear {
@@ -1481,12 +1491,14 @@ samp {
           animation-name: antMoveUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-up-leave.move-up-leave-active {
   -webkit-animation-name: antMoveUpOut;
           animation-name: antMoveUpOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-up-enter,
 .move-up-appear {
@@ -1521,12 +1533,14 @@ samp {
           animation-name: antMoveDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-down-leave.move-down-leave-active {
   -webkit-animation-name: antMoveDownOut;
           animation-name: antMoveDownOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-down-enter,
 .move-down-appear {
@@ -1561,12 +1575,14 @@ samp {
           animation-name: antMoveLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-left-leave.move-left-leave-active {
   -webkit-animation-name: antMoveLeftOut;
           animation-name: antMoveLeftOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-left-enter,
 .move-left-appear {
@@ -1601,12 +1617,14 @@ samp {
           animation-name: antMoveRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-right-leave.move-right-leave-active {
   -webkit-animation-name: antMoveRightOut;
           animation-name: antMoveRightOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-right-enter,
 .move-right-appear {
@@ -1925,12 +1943,14 @@ samp {
           animation-name: antSlideUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-up-leave.slide-up-leave-active {
   -webkit-animation-name: antSlideUpOut;
           animation-name: antSlideUpOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-up-enter,
 .slide-up-appear {
@@ -1965,12 +1985,14 @@ samp {
           animation-name: antSlideDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-down-leave.slide-down-leave-active {
   -webkit-animation-name: antSlideDownOut;
           animation-name: antSlideDownOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-down-enter,
 .slide-down-appear {
@@ -2005,12 +2027,14 @@ samp {
           animation-name: antSlideLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-left-leave.slide-left-leave-active {
   -webkit-animation-name: antSlideLeftOut;
           animation-name: antSlideLeftOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-left-enter,
 .slide-left-appear {
@@ -2045,12 +2069,14 @@ samp {
           animation-name: antSlideRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-right-leave.slide-right-leave-active {
   -webkit-animation-name: antSlideRightOut;
           animation-name: antSlideRightOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-right-enter,
 .slide-right-appear {
@@ -2403,12 +2429,14 @@ samp {
           animation-name: antZoomIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-leave.zoom-leave-active {
   -webkit-animation-name: antZoomOut;
           animation-name: antZoomOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-enter,
 .zoom-appear {
@@ -2445,12 +2473,14 @@ samp {
           animation-name: antZoomBigIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-big-leave.zoom-big-leave-active {
   -webkit-animation-name: antZoomBigOut;
           animation-name: antZoomBigOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-big-enter,
 .zoom-big-appear {
@@ -2487,12 +2517,14 @@ samp {
           animation-name: antZoomBigIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-big-fast-leave.zoom-big-fast-leave-active {
   -webkit-animation-name: antZoomBigOut;
           animation-name: antZoomBigOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-big-fast-enter,
 .zoom-big-fast-appear {
@@ -2529,12 +2561,14 @@ samp {
           animation-name: antZoomUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-up-leave.zoom-up-leave-active {
   -webkit-animation-name: antZoomUpOut;
           animation-name: antZoomUpOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-up-enter,
 .zoom-up-appear {
@@ -2571,12 +2605,14 @@ samp {
           animation-name: antZoomDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-down-leave.zoom-down-leave-active {
   -webkit-animation-name: antZoomDownOut;
           animation-name: antZoomDownOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-down-enter,
 .zoom-down-appear {
@@ -2613,12 +2649,14 @@ samp {
           animation-name: antZoomLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-left-leave.zoom-left-leave-active {
   -webkit-animation-name: antZoomLeftOut;
           animation-name: antZoomLeftOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-left-enter,
 .zoom-left-appear {
@@ -2655,12 +2693,14 @@ samp {
           animation-name: antZoomRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-right-leave.zoom-right-leave-active {
   -webkit-animation-name: antZoomRightOut;
           animation-name: antZoomRightOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-right-enter,
 .zoom-right-appear {
@@ -3011,11 +3051,6 @@ samp {
   -webkit-transition: height .12s, opacity .12s;
   transition: height .12s, opacity .12s;
 }
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
-}
 .ant-select {
   box-sizing: border-box;
   display: inline-block;
@@ -3242,6 +3277,7 @@ samp {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: left;
 }
 .ant-select-search__field__placeholder {
   left: 8px;
@@ -3249,6 +3285,7 @@ samp {
 .ant-select-search--inline {
   position: absolute;
   height: 100%;
+  width: 100%;
 }
 .ant-select-selection--multiple .ant-select-search--inline {
   float: left;
@@ -3297,8 +3334,10 @@ samp {
 .ant-select-selection--multiple .ant-select-search--inline {
   width: auto;
   padding: 0;
+  max-width: 100%;
 }
 .ant-select-selection--multiple .ant-select-search--inline .ant-select-search__field {
+  max-width: 100%;
   width: 0.75em;
 }
 .ant-select-selection--multiple .ant-select-selection__rendered {
@@ -3313,6 +3352,7 @@ samp {
   line-height: 28px;
 }
 .ant-select-selection--multiple .ant-select-selection__choice {
+  color: #333333;
   background-color: #f3f3f3;
   border-radius: 4px;
   cursor: default;
@@ -3509,7 +3549,7 @@ samp {
 }
 .ant-select-dropdown-menu-item-selected,
 .ant-select-dropdown-menu-item-selected:hover {
-  background-color: #eee;
+  background-color: #F8F8F8;
   font-weight: bold;
   color: #333333;
 }
@@ -3594,11 +3634,6 @@ samp {
 }
 .ant-select-dropdown-menu-item-divider {
   background-color: #E5E5E5;
-}
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
 }
 .ant-input-search-icon {
   cursor: pointer;
@@ -3963,6 +3998,9 @@ textarea.ant-input {
 .ant-input-group > [class*="col-"] {
   padding-right: 8px;
 }
+.ant-input-group > [class*="col-"]:last-child {
+  padding-right: 0;
+}
 .ant-input-group-addon,
 .ant-input-group-wrap,
 .ant-input-group > .ant-input {
@@ -4118,6 +4156,10 @@ textarea.ant-input {
   border-bottom-right-radius: 2px;
   border-right-width: 1px;
 }
+.ant-input-group-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
 .ant-input-affix-wrapper {
   position: relative;
   display: inline-block;
@@ -4152,16 +4194,14 @@ textarea.ant-input {
 .ant-input-affix-wrapper .ant-input:not(:last-child) {
   padding-right: 27px;
 }
+.ant-input-affix-wrapper .ant-input {
+  min-height: 100%;
+}
 .ant-input {
   color: #333333;
 }
 .ant-input-sm {
   font-size: 12px;
-}
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
 }
 .ant-btn {
   display: inline-block;
@@ -5449,11 +5489,6 @@ textarea.ant-input {
 .ant-btn-sm {
   font-size: 12px;
 }
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
-}
 .ant-radio-group {
   display: inline-block;
   font-size: 14px;
@@ -5479,6 +5514,25 @@ textarea.ant-input {
 .ant-radio:hover .ant-radio-inner,
 .ant-radio-focused .ant-radio-inner {
   border-color: #118BFB;
+}
+.ant-radio-checked:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #118BFB;
+  content: '';
+  -webkit-animation: antRadioEffect 0.36s ease-in-out;
+          animation: antRadioEffect 0.36s ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  visibility: hidden;
+}
+.ant-radio:hover:after,
+.ant-radio-wrapper:hover .ant-radio:after {
+  visibility: visible;
 }
 .ant-radio-inner {
   position: relative;
@@ -5566,6 +5620,7 @@ span.ant-radio + * {
   border-left: 0;
   background: #fff;
   padding: 0 16px;
+  position: relative;
 }
 .ant-radio-button-wrapper a {
   color: #333333;
@@ -5590,6 +5645,16 @@ span.ant-radio + * {
 }
 .ant-radio-group-small .ant-radio-button-wrapper:last-child {
   border-radius: 0 2px 2px 0;
+}
+.ant-radio-button-wrapper:not(:first-child)::before {
+  content: "";
+  display: block;
+  top: 0;
+  left: -1px;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  background-color: #dddddd;
 }
 .ant-radio-button-wrapper:first-child {
   border-radius: 2px 0 0 2px;
@@ -5619,6 +5684,11 @@ span.ant-radio + * {
   border-color: #118BFB;
   color: #118BFB;
   box-shadow: -1px 0 0 0 #118BFB;
+  z-index: 1;
+}
+.ant-radio-button-wrapper-checked::before {
+  background-color: #118BFB !important;
+  opacity: 0.1;
 }
 .ant-radio-button-wrapper-checked:first-child {
   border-color: #118BFB;
@@ -5655,6 +5725,30 @@ span.ant-radio + * {
   border-color: #dddddd;
   box-shadow: none;
 }
+@-webkit-keyframes antRadioEffect {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes antRadioEffect {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    opacity: 0;
+  }
+}
 span.ant-radio + * {
   padding-left: 6px;
   padding-right: 6px;
@@ -5663,10 +5757,29 @@ span.ant-radio + * {
   width: 16px;
   height: 16px;
 }
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
+@-webkit-keyframes antCheckboxEffect {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes antCheckboxEffect {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    opacity: 0;
+  }
 }
 .ant-checkbox {
   white-space: nowrap;
@@ -5681,6 +5794,25 @@ span.ant-radio + * {
 .ant-checkbox:hover .ant-checkbox-inner,
 .ant-checkbox-input:focus + .ant-checkbox-inner {
   border-color: #118BFB;
+}
+.ant-checkbox-checked:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  border: 1px solid #118BFB;
+  content: '';
+  -webkit-animation: antCheckboxEffect 0.36s ease-in-out;
+          animation: antCheckboxEffect 0.36s ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  visibility: hidden;
+}
+.ant-checkbox:hover:after,
+.ant-checkbox-wrapper:hover .ant-checkbox:after {
+  visibility: visible;
 }
 .ant-checkbox-inner {
   position: relative;
@@ -5758,6 +5890,9 @@ span.ant-radio + * {
   background-color: #118BFB;
   border-color: #118BFB;
 }
+.ant-checkbox-disabled {
+  cursor: not-allowed;
+}
 .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner:after {
   -webkit-animation-name: none;
           animation-name: none;
@@ -5822,11 +5957,6 @@ span.ant-radio + * {
 .ant-checkbox .ant-checkbox-checked .ant-checkbox-inner:after {
   width: 6px;
   height: 10px;
-}
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
 }
 .ant-dropdown {
   position: absolute;
@@ -5995,6 +6125,10 @@ span.ant-radio + * {
       -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
+.ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,
+.ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title:after {
+  color: rgba(0, 0, 0, 0.25);
+}
 .ant-dropdown-menu-submenu:first-child .ant-dropdown-menu-submenu-title {
   border-radius: 4px 4px 0 0;
 }
@@ -6102,11 +6236,6 @@ span.ant-radio + * {
   background: #108ee9;
   color: #fff;
 }
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
-}
 .ant-pagination {
   font-size: 14px;
 }
@@ -6120,9 +6249,10 @@ span.ant-radio + * {
 }
 .ant-pagination-total-text {
   display: inline-block;
-  height: 30px;
-  line-height: 30px;
-  margin-right: 10px;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  margin-right: 8px;
 }
 .ant-pagination-item {
   cursor: pointer;
@@ -6137,10 +6267,12 @@ span.ant-radio + * {
   text-align: center;
   list-style: none;
   display: inline-block;
+  vertical-align: middle;
   border: 1px solid #dddddd;
   background-color: #fff;
   margin-right: 8px;
   font-family: Arial;
+  outline: 0;
 }
 .ant-pagination-item a {
   text-decoration: none;
@@ -6149,11 +6281,13 @@ span.ant-radio + * {
   transition: none;
   margin: 0 6px;
 }
+.ant-pagination-item:focus,
 .ant-pagination-item:hover {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   border-color: #118BFB;
 }
+.ant-pagination-item:focus a,
 .ant-pagination-item:hover a {
   color: #118BFB;
 }
@@ -6161,9 +6295,19 @@ span.ant-radio + * {
   background-color: #118BFB;
   border-color: #118BFB;
 }
+.ant-pagination-item-active:focus,
+.ant-pagination-item-active:hover {
+  background-color: #349CFB;
+  border-color: #349CFB;
+}
 .ant-pagination-item-active a,
+.ant-pagination-item-active:focus a,
 .ant-pagination-item-active:hover a {
   color: #fff;
+}
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next {
+  outline: 0;
 }
 .ant-pagination-jump-prev:after,
 .ant-pagination-jump-next:after {
@@ -6173,6 +6317,8 @@ span.ant-radio + * {
   color: #999999;
   text-align: center;
 }
+.ant-pagination-jump-prev:focus:after,
+.ant-pagination-jump-next:focus:after,
 .ant-pagination-jump-prev:hover:after,
 .ant-pagination-jump-next:hover:after {
   color: #118BFB;
@@ -6188,18 +6334,24 @@ span.ant-radio + * {
   letter-spacing: -1px;
   font-family: "anticon";
 }
+:root .ant-pagination-jump-prev:focus:after,
+:root .ant-pagination-jump-next:focus:after,
 :root .ant-pagination-jump-prev:hover:after,
 :root .ant-pagination-jump-next:hover:after {
   -webkit-filter: none;
           filter: none;
 }
+:root .ant-pagination-jump-prev:focus:after,
+:root .ant-pagination-jump-next:focus:after,
 :root .ant-pagination-jump-prev:hover:after,
 :root .ant-pagination-jump-next:hover:after {
   font-size: 14px;
 }
+.ant-pagination-jump-prev:focus:after,
 .ant-pagination-jump-prev:hover:after {
   content: "\E620\E620";
 }
+.ant-pagination-jump-next:focus:after,
 .ant-pagination-jump-next:hover:after {
   content: "\E61F\E61F";
 }
@@ -6221,18 +6373,21 @@ span.ant-radio + * {
   height: 28px;
   line-height: 28px;
   text-align: center;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   display: inline-block;
+  vertical-align: middle;
 }
 .ant-pagination-prev,
 .ant-pagination-next {
   border: 1px solid #dddddd;
   background-color: #fff;
+  outline: 0;
 }
 .ant-pagination-prev a,
 .ant-pagination-next a {
   color: #333333;
+  outline: none;
 }
 .ant-pagination-prev a:after,
 .ant-pagination-next a:after {
@@ -6247,7 +6402,7 @@ span.ant-radio + * {
   zoom: 1;
   display: block;
   height: 26px;
-  line-height: 27px;
+  line-height: 26px;
   font-family: "anticon";
   text-align: center;
 }
@@ -6260,10 +6415,14 @@ span.ant-radio + * {
 :root .ant-pagination-next a:after {
   font-size: 14px;
 }
+.ant-pagination-prev:focus,
+.ant-pagination-next:focus,
 .ant-pagination-prev:hover,
 .ant-pagination-next:hover {
   border-color: #118BFB;
 }
+.ant-pagination-prev:focus a,
+.ant-pagination-next:focus a,
 .ant-pagination-prev:hover a,
 .ant-pagination-next:hover a {
   color: #118BFB;
@@ -6294,11 +6453,12 @@ span.ant-radio + * {
 }
 .ant-pagination-options {
   display: inline-block;
-  margin-left: 15px;
+  vertical-align: middle;
+  margin-left: 16px;
 }
 .ant-pagination-options-size-changer {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .ant-pagination-options-quick-jumper {
   display: inline-block;
@@ -6374,6 +6534,7 @@ textarea.ant-pagination-options-quick-jumper input {
 }
 .ant-pagination-simple .ant-pagination-simple-pager {
   display: inline-block;
+  vertical-align: middle;
   margin-right: 8px;
 }
 .ant-pagination-simple .ant-pagination-simple-pager input {
@@ -6384,11 +6545,10 @@ textarea.ant-pagination-options-quick-jumper input {
   border: 1px solid #dddddd;
   outline: none;
   padding: 5px 8px;
-  width: 30px;
   height: 24px;
   text-align: center;
-  -webkit-transition: border-color 0.3s ease;
-  transition: border-color 0.3s ease;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
 }
 .ant-pagination-simple .ant-pagination-simple-pager input:hover {
   border-color: #118BFB;
@@ -6492,11 +6652,6 @@ textarea.ant-pagination-options-quick-jumper input {
   line-height: 24px;
   height: 24px;
 }
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
-}
 .ant-spin {
   color: #108ee9;
   vertical-align: middle;
@@ -6584,13 +6739,14 @@ textarea.ant-pagination-options-quick-jumper input {
   opacity: 0.3;
   -webkit-transition: all .3s;
   transition: all .3s;
+  z-index: 10;
 }
 .ant-spin-tip {
   color: rgba(0, 0, 0, 0.43);
 }
 .ant-spin-dot {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 20px;
   height: 20px;
   -webkit-transform: rotate(45deg);
@@ -6686,11 +6842,6 @@ textarea.ant-pagination-options-quick-jumper input {
             transform: rotate(405deg);
   }
 }
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
-}
 .ant-table-wrapper {
   zoom: 1;
 }
@@ -6738,16 +6889,27 @@ textarea.ant-pagination-options-quick-jumper input {
 }
 .ant-table-thead > tr > th .anticon-filter,
 .ant-table-thead > tr > th .ant-table-filter-icon {
+  position: relative;
   margin-left: 4px;
   font-size: 14px;
   cursor: pointer;
   color: #aaa;
   -webkit-transition: all .3s;
   transition: all .3s;
+  width: 14px;
 }
 .ant-table-thead > tr > th .anticon-filter:hover,
 .ant-table-thead > tr > th .ant-table-filter-icon:hover {
   color: #333333;
+}
+.ant-table-thead > tr > th .anticon-filter:after,
+.ant-table-thead > tr > th .ant-table-filter-icon:after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 50px;
+  left: 0;
+  top: -19px;
 }
 .ant-table-thead > tr > th .ant-table-filter-selected.anticon-filter {
   color: #118BFB;
@@ -6817,7 +6979,7 @@ textarea.ant-pagination-options-quick-jumper input {
   background: #fafafa;
 }
 .ant-table-thead > tr > th.ant-table-column-sort {
-  background: #eaeaea;
+  background: #eee;
 }
 .ant-table-thead > tr > th,
 .ant-table-tbody > tr > td {
@@ -6876,6 +7038,19 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-table-middle .ant-table-footer {
   padding: 10px 8px;
 }
+.ant-table-middle .ant-table-column-sorter-up:after {
+  top: -13px;
+  height: 13px;
+}
+.ant-table-middle .ant-table-column-sorter-down:after {
+  bottom: -11px;
+  height: 13px;
+}
+.ant-table-middle .ant-table-thead > tr > th .anticon-filter:after,
+.ant-table-middle .ant-table-thead > tr > th .ant-table-filter-icon:after {
+  height: 38px;
+  top: -13px;
+}
 .ant-table-small {
   border: 1px solid #dddddd;
   border-radius: 2px;
@@ -6911,10 +7086,24 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-table-small .ant-table-row:last-child td {
   border-bottom: 0;
 }
+.ant-table-small .ant-table-column-sorter-up:after {
+  top: -14px;
+  height: 13px;
+}
+.ant-table-small .ant-table-column-sorter-down:after {
+  bottom: -11px;
+  height: 13px;
+}
+.ant-table-small .ant-table-thead > tr > th .anticon-filter:after,
+.ant-table-small .ant-table-thead > tr > th .ant-table-filter-icon:after {
+  height: 39px;
+  top: -14px;
+}
 .ant-table-column-sorter {
+  position: relative;
   margin-left: 4px;
   display: inline-block;
-  width: 12px;
+  width: 14px;
   height: 14px;
   vertical-align: middle;
   text-align: center;
@@ -6922,9 +7111,8 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-table-column-sorter-up,
 .ant-table-column-sorter-down {
   line-height: 4px;
-  height: 5px;
   display: block;
-  width: 12px;
+  width: 14px;
   cursor: pointer;
 }
 .ant-table-column-sorter-up:hover .anticon,
@@ -6937,14 +7125,28 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-table-column-sorter-down.on .anticon-caret-down {
   color: #118BFB;
 }
+.ant-table-column-sorter-up:after,
+.ant-table-column-sorter-down:after {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 14px;
+  left: 0;
+}
+.ant-table-column-sorter-up:after {
+  top: -19px;
+}
+.ant-table-column-sorter-down:after {
+  bottom: -17px;
+}
 .ant-table-column-sorter .anticon-caret-up,
 .ant-table-column-sorter .anticon-caret-down {
   display: inline-block;
   font-size: 14px;
-  font-size: 7px \9;
-  -webkit-transform: scale(0.58333333) rotate(0deg);
-      -ms-transform: scale(0.58333333) rotate(0deg);
-          transform: scale(0.58333333) rotate(0deg);
+  font-size: 8px \9;
+  -webkit-transform: scale(0.66666667) rotate(0deg);
+      -ms-transform: scale(0.66666667) rotate(0deg);
+          transform: scale(0.66666667) rotate(0deg);
   /* IE6-IE8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
   zoom: 1;
@@ -7172,7 +7374,7 @@ tr.ant-table-expanded-row:hover {
 .ant-table-body-inner {
   height: 100%;
 }
-.ant-table-fixed-header .ant-table-body {
+.ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body {
   position: relative;
   background: #fff;
 }

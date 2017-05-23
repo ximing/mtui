@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
-}
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -396,6 +391,11 @@ template {
 [hidden] {
   display: none;
 }
+@font-face {
+  font-family: "Helvetica Neue For Number";
+  src: local("Helvetica Neue");
+  unicode-range: U+30-39;
+}
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -481,6 +481,14 @@ input::-ms-reveal {
 ::selection {
   background: #118BFB;
   color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
 }
 a {
   color: #118BFB;
@@ -1409,12 +1417,14 @@ samp {
           animation-name: antFadeIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .fade-leave.fade-leave-active {
   -webkit-animation-name: antFadeOut;
           animation-name: antFadeOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .fade-enter,
 .fade-appear {
@@ -1481,12 +1491,14 @@ samp {
           animation-name: antMoveUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-up-leave.move-up-leave-active {
   -webkit-animation-name: antMoveUpOut;
           animation-name: antMoveUpOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-up-enter,
 .move-up-appear {
@@ -1521,12 +1533,14 @@ samp {
           animation-name: antMoveDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-down-leave.move-down-leave-active {
   -webkit-animation-name: antMoveDownOut;
           animation-name: antMoveDownOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-down-enter,
 .move-down-appear {
@@ -1561,12 +1575,14 @@ samp {
           animation-name: antMoveLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-left-leave.move-left-leave-active {
   -webkit-animation-name: antMoveLeftOut;
           animation-name: antMoveLeftOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-left-enter,
 .move-left-appear {
@@ -1601,12 +1617,14 @@ samp {
           animation-name: antMoveRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-right-leave.move-right-leave-active {
   -webkit-animation-name: antMoveRightOut;
           animation-name: antMoveRightOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .move-right-enter,
 .move-right-appear {
@@ -1925,12 +1943,14 @@ samp {
           animation-name: antSlideUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-up-leave.slide-up-leave-active {
   -webkit-animation-name: antSlideUpOut;
           animation-name: antSlideUpOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-up-enter,
 .slide-up-appear {
@@ -1965,12 +1985,14 @@ samp {
           animation-name: antSlideDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-down-leave.slide-down-leave-active {
   -webkit-animation-name: antSlideDownOut;
           animation-name: antSlideDownOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-down-enter,
 .slide-down-appear {
@@ -2005,12 +2027,14 @@ samp {
           animation-name: antSlideLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-left-leave.slide-left-leave-active {
   -webkit-animation-name: antSlideLeftOut;
           animation-name: antSlideLeftOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-left-enter,
 .slide-left-appear {
@@ -2045,12 +2069,14 @@ samp {
           animation-name: antSlideRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-right-leave.slide-right-leave-active {
   -webkit-animation-name: antSlideRightOut;
           animation-name: antSlideRightOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .slide-right-enter,
 .slide-right-appear {
@@ -2403,12 +2429,14 @@ samp {
           animation-name: antZoomIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-leave.zoom-leave-active {
   -webkit-animation-name: antZoomOut;
           animation-name: antZoomOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-enter,
 .zoom-appear {
@@ -2445,12 +2473,14 @@ samp {
           animation-name: antZoomBigIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-big-leave.zoom-big-leave-active {
   -webkit-animation-name: antZoomBigOut;
           animation-name: antZoomBigOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-big-enter,
 .zoom-big-appear {
@@ -2487,12 +2517,14 @@ samp {
           animation-name: antZoomBigIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-big-fast-leave.zoom-big-fast-leave-active {
   -webkit-animation-name: antZoomBigOut;
           animation-name: antZoomBigOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-big-fast-enter,
 .zoom-big-fast-appear {
@@ -2529,12 +2561,14 @@ samp {
           animation-name: antZoomUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-up-leave.zoom-up-leave-active {
   -webkit-animation-name: antZoomUpOut;
           animation-name: antZoomUpOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-up-enter,
 .zoom-up-appear {
@@ -2571,12 +2605,14 @@ samp {
           animation-name: antZoomDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-down-leave.zoom-down-leave-active {
   -webkit-animation-name: antZoomDownOut;
           animation-name: antZoomDownOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-down-enter,
 .zoom-down-appear {
@@ -2613,12 +2649,14 @@ samp {
           animation-name: antZoomLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-left-leave.zoom-left-leave-active {
   -webkit-animation-name: antZoomLeftOut;
           animation-name: antZoomLeftOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-left-enter,
 .zoom-left-appear {
@@ -2655,12 +2693,14 @@ samp {
           animation-name: antZoomRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-right-leave.zoom-right-leave-active {
   -webkit-animation-name: antZoomRightOut;
           animation-name: antZoomRightOut;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  pointer-events: none;
 }
 .zoom-right-enter,
 .zoom-right-appear {
@@ -3011,11 +3051,6 @@ samp {
   -webkit-transition: height .12s, opacity .12s;
   transition: height .12s, opacity .12s;
 }
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
-}
 .ant-select-auto-complete.ant-select .ant-select-selection {
   border: 0;
   box-shadow: none;
@@ -3024,11 +3059,11 @@ samp {
   margin-left: 0;
   margin-right: 0;
   height: 100%;
+  line-height: 28px;
 }
 .ant-select-auto-complete.ant-select .ant-select-selection__placeholder {
   margin-left: 8px;
   margin-right: 8px;
-  top: 14px;
 }
 .ant-select-auto-complete.ant-select-allow-clear .ant-select-selection:hover .ant-select-selection__rendered {
   margin-right: 0 !important;
@@ -3036,15 +3071,15 @@ samp {
 .ant-select-auto-complete.ant-select .ant-input {
   background: transparent;
 }
-.ant-select-auto-complete.ant-select-lg .ant-select-selection__placeholder {
-  top: 16px;
+.ant-select-auto-complete.ant-select-lg .ant-select-selection__rendered {
+  line-height: 32px;
 }
 .ant-select-auto-complete.ant-select-lg .ant-input {
   padding: 6px 7px;
   height: 32px;
 }
-.ant-select-auto-complete.ant-select-sm .ant-select-selection__placeholder {
-  top: 11px;
+.ant-select-auto-complete.ant-select-sm .ant-select-selection__rendered {
+  line-height: 22px;
 }
 .ant-select-auto-complete.ant-select-sm .ant-input {
   padding: 1px 7px;
@@ -3056,11 +3091,6 @@ samp {
 .ant-select-auto-complete.ant-select .ant-input:focus,
 .ant-select-auto-complete.ant-select .ant-input:hover {
   border-color: #49a9ee;
-}
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
 }
 .ant-select {
   box-sizing: border-box;
@@ -3288,6 +3318,7 @@ samp {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: left;
 }
 .ant-select-search__field__placeholder {
   left: 8px;
@@ -3295,6 +3326,7 @@ samp {
 .ant-select-search--inline {
   position: absolute;
   height: 100%;
+  width: 100%;
 }
 .ant-select-selection--multiple .ant-select-search--inline {
   float: left;
@@ -3343,8 +3375,10 @@ samp {
 .ant-select-selection--multiple .ant-select-search--inline {
   width: auto;
   padding: 0;
+  max-width: 100%;
 }
 .ant-select-selection--multiple .ant-select-search--inline .ant-select-search__field {
+  max-width: 100%;
   width: 0.75em;
 }
 .ant-select-selection--multiple .ant-select-selection__rendered {
@@ -3359,6 +3393,7 @@ samp {
   line-height: 28px;
 }
 .ant-select-selection--multiple .ant-select-selection__choice {
+  color: #333333;
   background-color: #f3f3f3;
   border-radius: 4px;
   cursor: default;
@@ -3555,7 +3590,7 @@ samp {
 }
 .ant-select-dropdown-menu-item-selected,
 .ant-select-dropdown-menu-item-selected:hover {
-  background-color: #eee;
+  background-color: #F8F8F8;
   font-weight: bold;
   color: #333333;
 }
@@ -3640,11 +3675,6 @@ samp {
 }
 .ant-select-dropdown-menu-item-divider {
   background-color: #E5E5E5;
-}
-@font-face {
-  font-family: "Helvetica Neue For Number";
-  src: local("Helvetica Neue");
-  unicode-range: U+30-39;
 }
 .ant-input-search-icon {
   cursor: pointer;
@@ -4009,6 +4039,9 @@ textarea.ant-input {
 .ant-input-group > [class*="col-"] {
   padding-right: 8px;
 }
+.ant-input-group > [class*="col-"]:last-child {
+  padding-right: 0;
+}
 .ant-input-group-addon,
 .ant-input-group-wrap,
 .ant-input-group > .ant-input {
@@ -4164,6 +4197,10 @@ textarea.ant-input {
   border-bottom-right-radius: 2px;
   border-right-width: 1px;
 }
+.ant-input-group-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
 .ant-input-affix-wrapper {
   position: relative;
   display: inline-block;
@@ -4197,6 +4234,9 @@ textarea.ant-input {
 }
 .ant-input-affix-wrapper .ant-input:not(:last-child) {
   padding-right: 27px;
+}
+.ant-input-affix-wrapper .ant-input {
+  min-height: 100%;
 }
 .ant-input {
   color: #333333;
