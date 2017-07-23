@@ -489,6 +489,7 @@ h4,
 h5,
 h6 {
   color: #333333;
+  font-weight: 500;
 }
 a {
   color: #118BFB;
@@ -3048,8 +3049,8 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s;
-  transition: height .12s, opacity .12s;
+  -webkit-transition: height .12s, opacity .12s !important;
+  transition: height .12s, opacity .12s !important;
 }
 .ant-input-number {
   position: relative;
@@ -3072,14 +3073,14 @@ samp {
   width: 80px;
 }
 .ant-input-number::-moz-placeholder {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
   opacity: 1;
 }
 .ant-input-number:-ms-input-placeholder {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-input-number::-webkit-input-placeholder {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-input-number:hover {
   border-color: #49a9ee;
@@ -3089,13 +3090,13 @@ samp {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
 }
-.ant-input-number[disabled] {
+.ant-input-number-disabled {
   background-color: #f7f7f7;
   opacity: 1;
   cursor: not-allowed;
   color: rgba(0, 0, 0, 0.25);
 }
-.ant-input-number[disabled]:hover {
+.ant-input-number-disabled:hover {
   border-color: #e2e2e2;
 }
 textarea.ant-input-number {
@@ -3209,14 +3210,14 @@ textarea.ant-input-number {
   padding: 0 7px;
 }
 .ant-input-number-input::-moz-placeholder {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
   opacity: 1;
 }
 .ant-input-number-input:-ms-input-placeholder {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-input-number-input::-webkit-input-placeholder {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-input-number-input[disabled] {
   background-color: #f7f7f7;

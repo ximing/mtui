@@ -1,6 +1,6 @@
 {
     "name": "mtui-d",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "description": "A new React project",
     "author": "",
     "main": "./lib",
@@ -9,8 +9,7 @@
         "dev": "./node_modules/.bin/webpack-dev-server ",
         "builddemo": "webpack --config webpack.build.demo.config.js",
         "buildlib": "webpack --config webpack.build.lib.config.js",
-        "build": "./build.sh",
-        "prepublish": "npm run build"
+        "build": "./build.sh"
     },
     "keywords": [],
     "license": "MIT",

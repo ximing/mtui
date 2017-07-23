@@ -489,6 +489,7 @@ h4,
 h5,
 h6 {
   color: #333333;
+  font-weight: 500;
 }
 a {
   color: #118BFB;
@@ -3048,8 +3049,8 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s;
-  transition: height .12s, opacity .12s;
+  -webkit-transition: height .12s, opacity .12s !important;
+  transition: height .12s, opacity .12s !important;
 }
 .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-container {
   height: 32px;
@@ -3271,8 +3272,6 @@ samp {
       -ms-user-select: none;
           user-select: none;
   z-index: 2;
-  margin-right: -2px;
-  margin-top: 2px;
   width: 32px;
   height: 100%;
   line-height: 32px;
@@ -3298,10 +3297,17 @@ samp {
   vertical-align: baseline;
   position: absolute;
   top: 50%;
-  margin-top: -50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   text-transform: none;
-  font-family: sans-serif;
+}
+.ant-tabs-tab-prev-icon:before,
+.ant-tabs-tab-next-icon:before {
+  display: block;
+  font-family: "anticon" !important;
   display: inline-block;
   font-size: 14px;
   font-size: 10px \9;
@@ -3312,19 +3318,14 @@ samp {
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
   zoom: 1;
 }
-:root .ant-tabs-tab-prev-icon,
-:root .ant-tabs-tab-next-icon {
+:root .ant-tabs-tab-prev-icon:before,
+:root .ant-tabs-tab-next-icon:before {
   -webkit-filter: none;
           filter: none;
 }
-:root .ant-tabs-tab-prev-icon,
-:root .ant-tabs-tab-next-icon {
+:root .ant-tabs-tab-prev-icon:before,
+:root .ant-tabs-tab-next-icon:before {
   font-size: 14px;
-}
-.ant-tabs-tab-prev-icon:before,
-.ant-tabs-tab-next-icon:before {
-  display: block;
-  font-family: "anticon" !important;
 }
 .ant-tabs-tab-btn-disabled {
   cursor: not-allowed;
@@ -3367,7 +3368,7 @@ samp {
   position: relative;
   margin: 0;
   list-style: none;
-  float: left;
+  display: inline-block;
 }
 .ant-tabs-nav:before,
 .ant-tabs-nav:after {
@@ -3393,6 +3394,9 @@ samp {
   transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   cursor: pointer;
   text-decoration: none;
+}
+.ant-tabs-nav .ant-tabs-tab:last-child {
+  margin-right: 0;
 }
 .ant-tabs-nav .ant-tabs-tab:hover {
   color: #349CFB;

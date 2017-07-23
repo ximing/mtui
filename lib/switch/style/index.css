@@ -489,6 +489,7 @@ h4,
 h5,
 h6 {
   color: #333333;
+  font-weight: 500;
 }
 a {
   color: #118BFB;
@@ -3048,8 +3049,8 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s;
-  transition: height .12s, opacity .12s;
+  -webkit-transition: height .12s, opacity .12s !important;
+  transition: height .12s, opacity .12s !important;
 }
 .ant-switch {
   position: relative;
@@ -3060,11 +3061,11 @@ samp {
   line-height: 20px;
   vertical-align: middle;
   border-radius: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid transparent;
   background-color: rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.36s;
+  transition: all 0.36s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -3087,8 +3088,8 @@ samp {
   background-color: #fff;
   content: " ";
   cursor: pointer;
-  -webkit-transition: all 0.3s, width 0.3s;
-  transition: all 0.3s, width 0.3s;
+  -webkit-transition: all 0.36s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  transition: all 0.36s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .ant-switch:active:after {
   width: 24px;
@@ -3130,7 +3131,6 @@ samp {
   margin-left: -16.5px;
 }
 .ant-switch-checked {
-  border-color: #108ee9;
   background-color: #108ee9;
 }
 .ant-switch-checked .ant-switch-inner {
@@ -3147,7 +3147,6 @@ samp {
 .ant-switch-disabled {
   cursor: not-allowed;
   background: #f4f4f4;
-  border-color: #f4f4f4;
 }
 .ant-switch-disabled:after {
   background: #ccc;

@@ -489,6 +489,7 @@ h4,
 h5,
 h6 {
   color: #333333;
+  font-weight: 500;
 }
 a {
   color: #118BFB;
@@ -3048,8 +3049,8 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s;
-  transition: height .12s, opacity .12s;
+  -webkit-transition: height .12s, opacity .12s !important;
+  transition: height .12s, opacity .12s !important;
 }
 @-webkit-keyframes antCheckboxEffect {
   0% {
@@ -3447,7 +3448,7 @@ samp {
 }
 .ant-tree {
   margin: 0;
-  padding: 5px;
+  padding: 0;
   font-size: 12px;
 }
 .ant-tree li {

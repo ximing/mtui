@@ -489,6 +489,7 @@ h4,
 h5,
 h6 {
   color: #333333;
+  font-weight: 500;
 }
 a {
   color: #118BFB;
@@ -3048,8 +3049,8 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s;
-  transition: height .12s, opacity .12s;
+  -webkit-transition: height .12s, opacity .12s !important;
+  transition: height .12s, opacity .12s !important;
 }
 .ant-menu {
   outline: none;
@@ -3193,6 +3194,9 @@ samp {
 .ant-menu-vertical.ant-menu-sub > .ant-menu-item-group:last-child > .ant-menu-item-group-list:last-child > .ant-menu-item:last-child {
   border-radius: 0 0 2px 2px;
 }
+.ant-menu-vertical.ant-menu-sub > .ant-menu-item:only-child {
+  border-radius: 2px;
+}
 .ant-menu-inline {
   width: 100%;
   -webkit-transition: width .24s;
@@ -3213,28 +3217,31 @@ samp {
 .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
   text-align: center;
   left: 0;
+  padding: 0;
 }
 .ant-menu-inline-collapsed > .ant-menu-item:after,
 .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title:after {
   display: none;
 }
-.ant-menu-inline-collapsed .ant-menu-item,
-.ant-menu-inline-collapsed .ant-menu-submenu-title {
-  padding: 0;
-}
-.ant-menu-inline-collapsed .ant-menu-item .anticon,
-.ant-menu-inline-collapsed .ant-menu-submenu-title .anticon {
+.ant-menu-inline-collapsed > .ant-menu-item .anticon,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon {
   font-size: 16px;
   line-height: 42px;
   margin: 0;
 }
-.ant-menu-inline-collapsed .ant-menu-item .anticon + span,
-.ant-menu-inline-collapsed .ant-menu-submenu-title .anticon + span {
+.ant-menu-inline-collapsed > .ant-menu-item .anticon + span,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon + span {
   max-width: 0;
   visibility: hidden;
 }
+.ant-menu-inline-collapsed-tooltip {
+  pointer-events: none;
+}
 .ant-menu-inline-collapsed-tooltip .anticon {
   display: none;
+}
+.ant-menu-inline-collapsed-tooltip a {
+  color: rgba(255, 255, 255, 0.91);
 }
 .ant-menu-submenu-horizontal > .ant-menu {
   top: 100%;
@@ -3269,7 +3276,7 @@ samp {
   margin-right: 8px;
   -webkit-transition: all .3s;
   transition: all .3s;
-  vertical-align: middle;
+  overflow: hidden;
 }
 .ant-menu-item .anticon + span,
 .ant-menu-submenu-title .anticon + span {
@@ -3278,7 +3285,8 @@ samp {
   overflow: hidden;
   -webkit-transition: all .3s;
   transition: all .3s;
-  vertical-align: middle;
+  line-height: 1;
+  text-overflow: ellipsis;
 }
 .ant-menu > .ant-menu-item-divider {
   height: 1px;

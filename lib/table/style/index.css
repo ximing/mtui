@@ -489,6 +489,7 @@ h4,
 h5,
 h6 {
   color: #333333;
+  font-weight: 500;
 }
 a {
   color: #118BFB;
@@ -3048,8 +3049,8 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s;
-  transition: height .12s, opacity .12s;
+  -webkit-transition: height .12s, opacity .12s !important;
+  transition: height .12s, opacity .12s !important;
 }
 .ant-select {
   box-sizing: border-box;
@@ -3961,13 +3962,13 @@ samp {
   outline: 0;
   box-shadow: none;
 }
-.ant-input[disabled] {
+.ant-input-disabled {
   background-color: #F8F8F8;
   opacity: 1;
   cursor: not-allowed;
   color: #999999;
 }
-.ant-input[disabled]:hover {
+.ant-input-disabled:hover {
   border-color: #e5e5e5;
 }
 textarea.ant-input {
@@ -4168,7 +4169,7 @@ textarea.ant-input {
 .ant-input-affix-wrapper .ant-input {
   z-index: 1;
 }
-.ant-input-affix-wrapper:hover .ant-input {
+.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
   border-color: #4aa7fc;
 }
 .ant-input-affix-wrapper .ant-input-prefix,
@@ -6502,13 +6503,13 @@ span.ant-radio + * {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(17, 139, 251, 0.2);
 }
-.ant-pagination-options-quick-jumper input[disabled] {
+.ant-pagination-options-quick-jumper input-disabled {
   background-color: #F8F8F8;
   opacity: 1;
   cursor: not-allowed;
   color: #999999;
 }
-.ant-pagination-options-quick-jumper input[disabled]:hover {
+.ant-pagination-options-quick-jumper input-disabled:hover {
   border-color: #e5e5e5;
 }
 textarea.ant-pagination-options-quick-jumper input {

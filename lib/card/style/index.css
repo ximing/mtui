@@ -489,6 +489,7 @@ h4,
 h5,
 h6 {
   color: #333333;
+  font-weight: 500;
 }
 a {
   color: #118BFB;
@@ -3048,8 +3049,8 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s;
-  transition: height .12s, opacity .12s;
+  -webkit-transition: height .12s, opacity .12s !important;
+  transition: height .12s, opacity .12s !important;
 }
 .ant-card {
   background: #fff;
@@ -3090,8 +3091,7 @@ samp {
   top: 14px;
 }
 .ant-card-body {
-  padding: 24.5px;
-  margin: -0.5px;
+  padding: 24px;
   zoom: 1;
 }
 .ant-card-body:before,
@@ -3122,6 +3122,9 @@ samp {
           animation: card-loading 1.4s ease infinite;
   background-size: 600% 600%;
 }
+.ant-card-contain-grid .ant-card-body {
+  margin: -0.5px;
+}
 .ant-card-grid {
   border-radius: 0;
   border: 0;
@@ -3136,6 +3139,24 @@ samp {
   position: relative;
   z-index: 1;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+.ant-card-wider-padding .ant-card-head {
+  padding: 0 32px;
+}
+.ant-card-wider-padding .ant-card-body {
+  padding: 24px 32px;
+}
+.ant-card-wider-padding .ant-card-extra {
+  right: 32px;
+}
+.ant-card-padding-transition .ant-card-head,
+.ant-card-padding-transition .ant-card-body {
+  -webkit-transition: padding .3s;
+  transition: padding .3s;
+}
+.ant-card-padding-transition .ant-card-extra {
+  -webkit-transition: right .3s;
+  transition: right .3s;
 }
 @-webkit-keyframes card-loading {
   0%,

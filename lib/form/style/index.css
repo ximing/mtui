@@ -489,6 +489,7 @@ h4,
 h5,
 h6 {
   color: #333333;
+  font-weight: 500;
 }
 a {
   color: #118BFB;
@@ -3048,8 +3049,8 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s;
-  transition: height .12s, opacity .12s;
+  -webkit-transition: height .12s, opacity .12s !important;
+  transition: height .12s, opacity .12s !important;
 }
 legend {
   display: block;
@@ -3204,11 +3205,14 @@ input[type="checkbox"].disabled {
 form .has-feedback .ant-input {
   padding-right: 24px;
 }
-form .has-feedback .ant-select-arrow,
-form .has-feedback .ant-select-selection__clear {
+form .has-feedback > .ant-select .ant-select-arrow,
+form .has-feedback > .ant-select .ant-select-selection__clear,
+form .has-feedback :not(.ant-input-group-addon) > .ant-select .ant-select-arrow,
+form .has-feedback :not(.ant-input-group-addon) > .ant-select .ant-select-selection__clear {
   right: 28px;
 }
-form .has-feedback .ant-select-selection-selected-value {
+form .has-feedback > .ant-select .ant-select-selection-selected-value,
+form .has-feedback :not(.ant-input-group-addon) > .ant-select .ant-select-selection-selected-value {
   padding-right: 42px;
 }
 form .has-feedback .ant-cascader-picker-arrow {
@@ -3521,6 +3525,10 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
   border-color: #f46e65;
   outline: 0;
   box-shadow: 0 0 0 2px rgba(240, 65, 52, 0.2);
+}
+.has-error .ant-input-group-addon .ant-select-selection {
+  border-color: transparent;
+  box-shadow: none;
 }
 .has-error .ant-calendar-picker-icon:after,
 .has-error .ant-picker-icon:after,

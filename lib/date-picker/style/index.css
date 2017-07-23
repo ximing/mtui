@@ -489,6 +489,7 @@ h4,
 h5,
 h6 {
   color: #333333;
+  font-weight: 500;
 }
 a {
   color: #118BFB;
@@ -3048,8 +3049,8 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s;
-  transition: height .12s, opacity .12s;
+  -webkit-transition: height .12s, opacity .12s !important;
+  transition: height .12s, opacity .12s !important;
 }
 .ant-input-search-icon {
   cursor: pointer;
@@ -3377,13 +3378,13 @@ samp {
   outline: 0;
   box-shadow: none;
 }
-.ant-input[disabled] {
+.ant-input-disabled {
   background-color: #F8F8F8;
   opacity: 1;
   cursor: not-allowed;
   color: #999999;
 }
-.ant-input[disabled]:hover {
+.ant-input-disabled:hover {
   border-color: #e5e5e5;
 }
 textarea.ant-input {
@@ -3584,7 +3585,7 @@ textarea.ant-input {
 .ant-input-affix-wrapper .ant-input {
   z-index: 1;
 }
-.ant-input-affix-wrapper:hover .ant-input {
+.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
   border-color: #4aa7fc;
 }
 .ant-input-affix-wrapper .ant-input-prefix,
@@ -3659,7 +3660,7 @@ textarea.ant-input {
   outline: none;
   display: block;
 }
-.ant-calendar-picker:hover .ant-calendar-picker-input:not([disabled]) {
+.ant-calendar-picker:hover .ant-calendar-picker-input:not(.ant-input-disabled) {
   border-color: #118BFB;
 }
 .ant-calendar-picker-clear,
@@ -4310,15 +4311,15 @@ textarea.ant-input {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(17, 139, 251, 0.2);
 }
-.ant-calendar-range .ant-calendar-input[disabled],
-.ant-calendar-range .ant-calendar-time-picker-input[disabled] {
+.ant-calendar-range .ant-calendar-input-disabled,
+.ant-calendar-range .ant-calendar-time-picker-input-disabled {
   background-color: #F8F8F8;
   opacity: 1;
   cursor: not-allowed;
   color: #999999;
 }
-.ant-calendar-range .ant-calendar-input[disabled]:hover,
-.ant-calendar-range .ant-calendar-time-picker-input[disabled]:hover {
+.ant-calendar-range .ant-calendar-input-disabled:hover,
+.ant-calendar-range .ant-calendar-time-picker-input-disabled:hover {
   border-color: #e5e5e5;
 }
 textarea.ant-calendar-range .ant-calendar-input,
@@ -5250,14 +5251,14 @@ li.ant-time-picker-panel-select-option-disabled:hover {
   transition: all .3s;
 }
 .ant-time-picker-input::-moz-placeholder {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
   opacity: 1;
 }
 .ant-time-picker-input:-ms-input-placeholder {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-time-picker-input::-webkit-input-placeholder {
-  color: #ccc;
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-time-picker-input:hover {
   border-color: #49a9ee;
@@ -5267,13 +5268,13 @@ li.ant-time-picker-panel-select-option-disabled:hover {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
 }
-.ant-time-picker-input[disabled] {
+.ant-time-picker-input-disabled {
   background-color: #f7f7f7;
   opacity: 1;
   cursor: not-allowed;
   color: rgba(0, 0, 0, 0.25);
 }
-.ant-time-picker-input[disabled]:hover {
+.ant-time-picker-input-disabled:hover {
   border-color: #e2e2e2;
 }
 textarea.ant-time-picker-input {
@@ -5288,6 +5289,15 @@ textarea.ant-time-picker-input {
 .ant-time-picker-input-sm {
   padding: 1px 7px;
   height: 22px;
+}
+.ant-time-picker-input[disabled] {
+  background-color: #f7f7f7;
+  opacity: 1;
+  cursor: not-allowed;
+  color: rgba(0, 0, 0, 0.25);
+}
+.ant-time-picker-input[disabled]:hover {
+  border-color: #e2e2e2;
 }
 .ant-time-picker-large .ant-time-picker-input {
   padding: 6px 7px;
