@@ -9,7 +9,8 @@
         "dev": "./node_modules/.bin/webpack-dev-server ",
         "builddemo": "webpack --config webpack.build.demo.config.js",
         "buildlib": "webpack --config webpack.build.lib.config.js",
-        "build": "./build.sh"
+        "build": "./build.sh",
+        "prepublish": "npm run build"
     },
     "keywords": [],
     "license": "MIT",
