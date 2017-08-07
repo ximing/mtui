@@ -1,6 +1,6 @@
 {
     "name": "mtui-d",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "description": "A new React project",
     "author": "",
     "main": "./lib",
@@ -64,6 +64,6 @@
         "npm": ">= 3.0.0"
     },
     "dependencies": {
-        "antd": "2.12.2"
+        "antd": "2.12.4"
     }
 }

@@ -1,3 +1,6 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable declaration-bang-space-before */
+/* stylelint-disable declaration-bang-space-before */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1418,7 +1421,6 @@ samp {
           animation-name: antFadeIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .fade-leave.fade-leave-active {
   -webkit-animation-name: antFadeOut;
@@ -1492,7 +1494,6 @@ samp {
           animation-name: antMoveUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .move-up-leave.move-up-leave-active {
   -webkit-animation-name: antMoveUpOut;
@@ -1534,7 +1535,6 @@ samp {
           animation-name: antMoveDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .move-down-leave.move-down-leave-active {
   -webkit-animation-name: antMoveDownOut;
@@ -1576,7 +1576,6 @@ samp {
           animation-name: antMoveLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .move-left-leave.move-left-leave-active {
   -webkit-animation-name: antMoveLeftOut;
@@ -1618,7 +1617,6 @@ samp {
           animation-name: antMoveRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .move-right-leave.move-right-leave-active {
   -webkit-animation-name: antMoveRightOut;
@@ -1944,7 +1942,6 @@ samp {
           animation-name: antSlideUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .slide-up-leave.slide-up-leave-active {
   -webkit-animation-name: antSlideUpOut;
@@ -1986,7 +1983,6 @@ samp {
           animation-name: antSlideDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .slide-down-leave.slide-down-leave-active {
   -webkit-animation-name: antSlideDownOut;
@@ -2028,7 +2024,6 @@ samp {
           animation-name: antSlideLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .slide-left-leave.slide-left-leave-active {
   -webkit-animation-name: antSlideLeftOut;
@@ -2070,7 +2065,6 @@ samp {
           animation-name: antSlideRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .slide-right-leave.slide-right-leave-active {
   -webkit-animation-name: antSlideRightOut;
@@ -2430,7 +2424,6 @@ samp {
           animation-name: antZoomIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .zoom-leave.zoom-leave-active {
   -webkit-animation-name: antZoomOut;
@@ -2474,7 +2467,6 @@ samp {
           animation-name: antZoomBigIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .zoom-big-leave.zoom-big-leave-active {
   -webkit-animation-name: antZoomBigOut;
@@ -2518,7 +2510,6 @@ samp {
           animation-name: antZoomBigIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .zoom-big-fast-leave.zoom-big-fast-leave-active {
   -webkit-animation-name: antZoomBigOut;
@@ -2562,7 +2553,6 @@ samp {
           animation-name: antZoomUpIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .zoom-up-leave.zoom-up-leave-active {
   -webkit-animation-name: antZoomUpOut;
@@ -2606,7 +2596,6 @@ samp {
           animation-name: antZoomDownIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .zoom-down-leave.zoom-down-leave-active {
   -webkit-animation-name: antZoomDownOut;
@@ -2650,7 +2639,6 @@ samp {
           animation-name: antZoomLeftIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .zoom-left-leave.zoom-left-leave-active {
   -webkit-animation-name: antZoomLeftOut;
@@ -2694,7 +2682,6 @@ samp {
           animation-name: antZoomRightIn;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  pointer-events: none;
 }
 .zoom-right-leave.zoom-right-leave-active {
   -webkit-animation-name: antZoomRightOut;
@@ -3049,9 +3036,12 @@ samp {
   overflow: hidden;
 }
 .ant-motion-collapse-active {
-  -webkit-transition: height .12s, opacity .12s !important;
-  transition: height .12s, opacity .12s !important;
+  -webkit-transition: height 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  transition: height 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
 }
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable declaration-bang-space-before */
+/* stylelint-disable declaration-bang-space-before */
 .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-container {
   height: 32px;
 }
@@ -3123,8 +3113,8 @@ samp {
 }
 .ant-tabs.ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane,
 .ant-tabs.ant-tabs-editable-card .ant-tabs-content > .ant-tabs-tabpane {
-  -webkit-transition: none!important;
-  transition: none!important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 .ant-tabs.ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane-inactive,
 .ant-tabs.ant-tabs-editable-card .ant-tabs-content > .ant-tabs-tabpane-inactive {
@@ -3134,7 +3124,6 @@ samp {
   opacity: 1;
 }
 .ant-tabs-extra-content {
-  float: right;
   line-height: 32px;
 }
 .ant-tabs-extra-content .ant-tabs-new-tab {
@@ -3155,8 +3144,8 @@ samp {
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
   zoom: 1;
   color: #666666;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 :root .ant-tabs-extra-content .ant-tabs-new-tab {
   -webkit-filter: none;
@@ -3166,7 +3155,8 @@ samp {
   font-size: 14px;
 }
 .ant-tabs-extra-content .ant-tabs-new-tab:hover {
-  color: #404040;
+  color: #118BFB;
+  border-color: #118BFB;
 }
 .ant-tabs-vertical.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-container {
   height: auto;
@@ -3180,6 +3170,9 @@ samp {
 }
 .ant-tabs-vertical.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab:last-child {
   margin-bottom: 8px;
+}
+.ant-tabs-vertical.ant-tabs-card > .ant-tabs-bar .ant-tabs-new-tab {
+  width: 90%;
 }
 .ant-tabs-vertical.ant-tabs-card.ant-tabs-left > .ant-tabs-bar .ant-tabs-nav-wrap {
   margin-right: 0;
@@ -3239,6 +3232,8 @@ samp {
   border-bottom: 1px solid #dddddd;
   margin-bottom: 16px;
   outline: none;
+  -webkit-transition: padding .45s;
+  transition: padding .45s;
 }
 .ant-tabs-nav-container {
   overflow: hidden;
@@ -3248,6 +3243,8 @@ samp {
   position: relative;
   white-space: nowrap;
   margin-bottom: -1px;
+  -webkit-transition: padding .45s;
+  transition: padding .45s;
   zoom: 1;
 }
 .ant-tabs-nav-container:before,
@@ -3272,8 +3269,8 @@ samp {
       -ms-user-select: none;
           user-select: none;
   z-index: 2;
-  width: 32px;
-  height: 100%;
+  width: 0;
+  height: 0;
   line-height: 32px;
   cursor: pointer;
   border: 0;
@@ -3281,8 +3278,17 @@ samp {
   position: absolute;
   text-align: center;
   color: #666666;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: width .3s, height .3s, opacity .3s, color .3s;
+  transition: width .3s, height .3s, opacity .3s, color .3s;
+  opacity: 0;
+  pointer-events: none;
+}
+.ant-tabs-tab-prev.ant-tabs-tab-arrow-show,
+.ant-tabs-tab-next.ant-tabs-tab-arrow-show {
+  opacity: 1;
+  width: 32px;
+  height: 100%;
+  pointer-events: auto;
 }
 .ant-tabs-tab-prev:hover,
 .ant-tabs-tab-next:hover {
@@ -3434,7 +3440,7 @@ samp {
 .ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane-inactive {
   opacity: 0;
   height: 0;
-  padding: 0!important;
+  padding: 0 !important;
   pointer-events: none;
 }
 .ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content-animated {
@@ -3455,6 +3461,11 @@ samp {
   border-bottom: 0;
   height: 100%;
 }
+.ant-tabs-vertical > .ant-tabs-bar-tab-prev.ant-tabs-tab-arrow-show,
+.ant-tabs-vertical > .ant-tabs-bar-tab-next.ant-tabs-tab-arrow-show {
+  width: 100%;
+  height: 32px;
+}
 .ant-tabs-vertical > .ant-tabs-bar .ant-tabs-tab {
   float: none;
   margin-right: 0;
@@ -3464,6 +3475,9 @@ samp {
 }
 .ant-tabs-vertical > .ant-tabs-bar .ant-tabs-tab:last-child {
   margin-bottom: 0;
+}
+.ant-tabs-vertical > .ant-tabs-bar .ant-tabs-extra-content {
+  text-align: center;
 }
 .ant-tabs-vertical > .ant-tabs-bar .ant-tabs-nav-scroll {
   width: auto;
@@ -3481,6 +3495,9 @@ samp {
 .ant-tabs-vertical > .ant-tabs-bar .ant-tabs-nav-wrap {
   margin-bottom: 0;
 }
+.ant-tabs-vertical > .ant-tabs-bar .ant-tabs-nav {
+  width: 100%;
+}
 .ant-tabs-vertical > .ant-tabs-bar .ant-tabs-ink-bar {
   width: 2px;
   left: auto;
@@ -3490,7 +3507,7 @@ samp {
 .ant-tabs-vertical > .ant-tabs-content {
   overflow: hidden;
   width: auto;
-  margin-top: 0!important;
+  margin-top: 0 !important;
 }
 .ant-tabs-vertical > .ant-tabs-bar .ant-tabs-tab-next {
   width: 100%;
