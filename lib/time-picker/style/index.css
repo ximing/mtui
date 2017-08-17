@@ -3339,6 +3339,7 @@ samp {
   height: 36px;
   cursor: text;
   font-size: 14px;
+  line-height: 1.5;
   color: #333333;
   background-color: #fff;
   background-image: none;
@@ -3816,6 +3817,7 @@ li.ant-time-picker-panel-select-option-disabled:hover {
   height: 28px;
   cursor: text;
   font-size: 12px;
+  line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
   background-image: none;

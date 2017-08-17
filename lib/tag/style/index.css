@@ -3233,15 +3233,117 @@ samp {
   font-size: 12px;
   color: #666666;
 }
-.ant-tag:hover {
-  border: 1px solid #118BFB;
-  color: #118BFB;
-}
 .ant-tag-has-color {
+  border-color: transparent;
   border: none;
   color: #FFFFFF;
 }
-.ant-tag-has-color:hover {
+.ant-tag-has-color,
+.ant-tag-has-color a,
+.ant-tag-has-color a:hover,
+.ant-tag-has-color .anticon-cross,
+.ant-tag-has-color .anticon-cross:hover {
   border: none;
-  color: #FFFFFF;
+  color: #fff;
+}
+.ant-tag-checkable {
+  background-color: transparent;
+  border-color: transparent;
+  border: none;
+}
+.ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
+  color: #118BFB;
+  border: none;
+}
+.ant-tag-checkable:active,
+.ant-tag-checkable-checked {
+  color: #fff;
+}
+.ant-tag-checkable-checked {
+  background-color: #118BFB;
+  border: none;
+}
+.ant-tag-checkable:active {
+  background-color: #118BFB;
+  border: none;
+}
+.ant-tag-pink {
+  color: #f5317f;
+  background: #fdd8e7;
+  border-color: #fdd8e7;
+}
+.ant-tag-pink-inverse {
+  background: #f5317f;
+  border-color: #f5317f;
+  color: #fff;
+}
+.ant-tag-red {
+  color: #f04134;
+  background: #FFE6E4;
+  border-color: #FFE6E4;
+}
+.ant-tag-red-inverse {
+  background: #f04134;
+  border-color: #f04134;
+  color: #fff;
+}
+.ant-tag-orange {
+  color: #f56a00;
+  background: #fde3cf;
+  border-color: #fde3cf;
+}
+.ant-tag-orange-inverse {
+  background: #f56a00;
+  border-color: #f56a00;
+  color: #fff;
+}
+.ant-tag-yellow {
+  color: #ffbf00;
+  background: #FFEFD9;
+  border-color: #FFEFD9;
+}
+.ant-tag-yellow-inverse {
+  background: #ffbf00;
+  border-color: #ffbf00;
+  color: #fff;
+}
+.ant-tag-cyan {
+  color: #00a2ae;
+  background: #cfedf0;
+  border-color: #cfedf0;
+}
+.ant-tag-cyan-inverse {
+  background: #00a2ae;
+  border-color: #00a2ae;
+  color: #fff;
+}
+.ant-tag-green {
+  color: #00a854;
+  background: #E6F4E1;
+  border-color: #E6F4E1;
+}
+.ant-tag-green-inverse {
+  background: #00a854;
+  border-color: #00a854;
+  color: #fff;
+}
+.ant-tag-blue {
+  color: #108ee9;
+  background: #DBEDFE;
+  border-color: #DBEDFE;
+}
+.ant-tag-blue-inverse {
+  background: #108ee9;
+  border-color: #108ee9;
+  color: #fff;
+}
+.ant-tag-purple {
+  color: #7265e6;
+  background: #e4e2fa;
+  border-color: #e4e2fa;
+}
+.ant-tag-purple-inverse {
+  background: #7265e6;
+  border-color: #7265e6;
+  color: #fff;
 }

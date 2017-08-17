@@ -3047,6 +3047,7 @@ samp {
   padding: 4px 7px;
   width: 100%;
   cursor: text;
+  line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
   background-image: none;
@@ -3197,6 +3198,7 @@ textarea.ant-input-number {
   border: 0;
   border-radius: 4px;
   padding: 0 7px;
+  display: block;
 }
 .ant-input-number-input::-moz-placeholder {
   color: rgba(0, 0, 0, 0.25);

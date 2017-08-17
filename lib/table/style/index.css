@@ -3926,6 +3926,7 @@ samp {
   height: 36px;
   cursor: text;
   font-size: 14px;
+  line-height: 1.5;
   color: #333333;
   background-color: #fff;
   background-image: none;
@@ -6487,6 +6488,7 @@ span.ant-radio + * {
   height: 36px;
   cursor: text;
   font-size: 14px;
+  line-height: 1.5;
   color: #333333;
   background-color: #fff;
   background-image: none;
@@ -7408,6 +7410,9 @@ tr.ant-table-expanded-row:hover {
 .ant-table-fixed-header.ant-table-empty .ant-table-scroll .ant-table-body {
   padding-bottom: 20px;
   margin-bottom: -20px;
+}
+.ant-table-empty .ant-table-scroll .ant-table-body .ant-table-fixed {
+  width: auto !important;
 }
 .ant-table-fixed-left,
 .ant-table-fixed-right {

@@ -3970,6 +3970,7 @@ samp {
   height: 36px;
   cursor: text;
   font-size: 14px;
+  line-height: 1.5;
   color: #333333;
   background-color: #fff;
   background-image: none;

@@ -3656,9 +3656,9 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 .ant-row-flex:before,
 .ant-row-flex:after {

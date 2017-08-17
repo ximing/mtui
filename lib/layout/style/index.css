@@ -3065,6 +3065,10 @@ samp {
       -ms-flex-direction: row;
           flex-direction: row;
 }
+.ant-layout.ant-layout-has-sider > .ant-layout,
+.ant-layout.ant-layout-has-sider > .ant-layout-content {
+  overflow-x: hidden;
+}
 .ant-layout-header,
 .ant-layout-footer {
   -webkit-box-flex: 0;
@@ -3107,15 +3111,15 @@ samp {
           order: 1;
 }
 .ant-layout-sider-trigger {
-  position: absolute;
+  position: fixed;
   text-align: center;
-  width: 100%;
   bottom: 0;
   cursor: pointer;
   height: 48px;
   line-height: 48px;
-  background: #5c5c5c;
   color: #fff;
+  background: #5c5c5c;
+  z-index: 1;
 }
 .ant-layout-sider-zero-width > * {
   overflow: hidden;

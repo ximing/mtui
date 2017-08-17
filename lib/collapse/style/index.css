@@ -3093,10 +3093,6 @@ samp {
   transition: transform 0.24s, -webkit-transform 0.24s;
   top: 0;
   left: 16px;
-  /* stylelint-disable declaration-block-no-duplicate-properties */
-  top: 16px \9;
-  left: 0 \9;
-  /* stylelint-enable declaration-block-no-duplicate-properties */
 }
 :root .ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow {
   -webkit-filter: none;
