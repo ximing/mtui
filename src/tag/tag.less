@@ -9,16 +9,66 @@
   background: #FFFFFF;
   font-size: @font-size-sm;
   color: @text-color-secondary;
-  &:hover {
-    border: 1px solid @primary-color;
-    color: @primary-color;
-  }
-  &-has-color{
+  //&:hover {
+  //  border: 1px solid @primary-color;
+  //  color: @primary-color;
+  //}
+  &-has-color {
+    border-color: transparent;
     border:none;
     color: #FFFFFF;
-    &:hover {
+    &,
+    a,
+    a:hover,
+    .@{iconfont-css-prefix}-cross,
+    .@{iconfont-css-prefix}-cross:hover {
       border:none;
-      color: #FFFFFF;
+      color: #fff;
     }
   }
+
+  &-checkable {
+    background-color: transparent;
+    border-color: transparent;
+    border:none;
+    &:not(&-checked):hover {
+      color: @primary-color;
+      border:none;
+    }
+    &:active,
+    &-checked {
+      color: #fff;
+    }
+    &-checked {
+      background-color: @primary-6;
+      border:none;
+    }
+    &:active {
+      background-color: @primary-7;
+      border:none;
+    }
+  }
+
+
+  @colors: pink, red, orange, yellow, cyan, green, blue, purple;
+
+  // mixin to iterate over colors and create CSS class for each one
+  .make-color-classes(@i: length(@colors)) when (@i > 0) {
+    .make-color-classes(@i - 1);
+    @color: extract(@colors, @i);
+    @lightColor: "@{color}-2";
+    @darkColor: "@{color}-6";
+    &-@{color} {
+      color: @@darkColor;
+      background: @@lightColor;
+      border-color: @@lightColor;
+    }
+    &-@{color}-inverse {
+      background: @@darkColor;
+      border-color: @@darkColor;
+      color: #fff;
+    }
+  }
+
+  .make-color-classes();
 }

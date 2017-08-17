@@ -14,6 +14,7 @@ export default function () {
         <div>
             <Tag>Tag 1</Tag>
             <Tag color="#f50">#f50</Tag>
+            <Tag color="red">red</Tag>
             <Tag closable onClose={log}>Tag 2</Tag>
         </div>
     )
