@@ -7,6 +7,8 @@ export { default as Affix } from './affix';
 
 export { default as Anchor } from './anchor';
 
+export { default as Avatar } from './avatar';
+
 export { default as AutoComplete } from './auto-complete';
 
 export { default as Alert } from './alert';
