@@ -478,11 +478,11 @@ input::-ms-reveal {
   display: none;
 }
 ::-moz-selection {
-  background: #118BFB;
+  background: #3974CC;
   color: #fff;
 }
 ::selection {
-  background: #118BFB;
+  background: #3974CC;
   color: #fff;
 }
 h1,
@@ -495,7 +495,7 @@ h6 {
   font-weight: 500;
 }
 a {
-  color: #118BFB;
+  color: #3974CC;
   background: transparent;
   text-decoration: none;
   outline: none;
@@ -509,10 +509,10 @@ a:focus {
           text-decoration-skip: ink;
 }
 a:hover {
-  color: #349CFB;
+  color: #1083EE;
 }
 a:active {
-  color: #118BFB;
+  color: #3974CC;
 }
 a:active,
 a:hover {
@@ -3113,17 +3113,17 @@ samp {
   border-color: transparent;
 }
 .ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-tag-checkable:active,
 .ant-tag-checkable-checked {
   color: #fff;
 }
 .ant-tag-checkable-checked {
-  background-color: #118BFB;
+  background-color: #3974CC;
 }
 .ant-tag-checkable:active {
-  background-color: #118BFB;
+  background-color: #3974CC;
 }
 .ant-tag-close {
   width: 0 !important;
@@ -3252,7 +3252,7 @@ samp {
   border: none;
 }
 .ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
-  color: #118BFB;
+  color: #3974CC;
   border: none;
 }
 .ant-tag-checkable:active,
@@ -3260,11 +3260,11 @@ samp {
   color: #fff;
 }
 .ant-tag-checkable-checked {
-  background-color: #118BFB;
+  background-color: #3974CC;
   border: none;
 }
 .ant-tag-checkable:active {
-  background-color: #118BFB;
+  background-color: #3974CC;
   border: none;
 }
 .ant-tag-pink {

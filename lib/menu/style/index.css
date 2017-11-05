@@ -478,11 +478,11 @@ input::-ms-reveal {
   display: none;
 }
 ::-moz-selection {
-  background: #118BFB;
+  background: #3974CC;
   color: #fff;
 }
 ::selection {
-  background: #118BFB;
+  background: #3974CC;
   color: #fff;
 }
 h1,
@@ -495,7 +495,7 @@ h6 {
   font-weight: 500;
 }
 a {
-  color: #118BFB;
+  color: #3974CC;
   background: transparent;
   text-decoration: none;
   outline: none;
@@ -509,10 +509,10 @@ a:focus {
           text-decoration-skip: ink;
 }
 a:hover {
-  color: #349CFB;
+  color: #1083EE;
 }
 a:active {
-  color: #118BFB;
+  color: #3974CC;
 }
 a:active,
 a:hover {
@@ -3097,7 +3097,7 @@ samp {
   color: #333333;
 }
 .ant-menu-item > a:hover {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-menu-item > a:focus {
   text-decoration: none;
@@ -3124,7 +3124,7 @@ samp {
 .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
 .ant-menu-submenu-active,
 .ant-menu-submenu-title:hover {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open {
   z-index: 1050;
@@ -3139,11 +3139,11 @@ samp {
   background-color: transparent;
 }
 .ant-menu-item-selected {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-menu-item-selected > a,
 .ant-menu-item-selected > a:hover {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background-color: #E7F3FE;
@@ -3171,7 +3171,7 @@ samp {
   right: 0;
   top: 0;
   bottom: 0;
-  border-right: 3px solid #118BFB;
+  border-right: 3px solid #3974CC;
   -webkit-transform: scaleY(0.0001);
       -ms-transform: scaleY(0.0001);
           transform: scaleY(0.0001);
@@ -3373,10 +3373,10 @@ samp {
           transform: rotate(180deg) scale(0.75);
 }
 .ant-menu-vertical .ant-menu-submenu-selected {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-menu-vertical .ant-menu-submenu-selected > a {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-menu-horizontal {
   border: 0;
@@ -3399,8 +3399,8 @@ samp {
 .ant-menu-horizontal > .ant-menu-submenu-open,
 .ant-menu-horizontal > .ant-menu-item-selected,
 .ant-menu-horizontal > .ant-menu-submenu-selected {
-  border-bottom: 2px solid #118BFB;
-  color: #118BFB;
+  border-bottom: 2px solid #3974CC;
+  color: #3974CC;
 }
 .ant-menu-horizontal > .ant-menu-item > a,
 .ant-menu-horizontal > .ant-menu-submenu > a {
@@ -3409,7 +3409,7 @@ samp {
 }
 .ant-menu-horizontal > .ant-menu-item > a:hover,
 .ant-menu-horizontal > .ant-menu-submenu > a:hover {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-menu-horizontal:after {
   content: " ";
@@ -3547,7 +3547,7 @@ samp {
   color: #fff;
 }
 .ant-menu.ant-menu-dark .ant-menu-item-selected {
-  background-color: #118BFB;
+  background-color: #3974CC;
 }
 .ant-menu-dark .ant-menu-item-disabled,
 .ant-menu-dark .ant-menu-submenu-disabled,

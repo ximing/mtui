@@ -478,11 +478,11 @@ input::-ms-reveal {
   display: none;
 }
 ::-moz-selection {
-  background: #118BFB;
+  background: #3974CC;
   color: #fff;
 }
 ::selection {
-  background: #118BFB;
+  background: #3974CC;
   color: #fff;
 }
 h1,
@@ -495,7 +495,7 @@ h6 {
   font-weight: 500;
 }
 a {
-  color: #118BFB;
+  color: #3974CC;
   background: transparent;
   text-decoration: none;
   outline: none;
@@ -509,10 +509,10 @@ a:focus {
           text-decoration-skip: ink;
 }
 a:hover {
-  color: #349CFB;
+  color: #1083EE;
 }
 a:active {
-  color: #118BFB;
+  color: #3974CC;
 }
 a:active,
 a:hover {
@@ -3077,7 +3077,7 @@ samp {
 }
 .ant-message-info .anticon,
 .ant-message-loading .anticon {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-message .anticon {
   margin-right: 8px;
@@ -3137,6 +3137,6 @@ samp {
   background: #FFF4E6;
 }
 .ant-message-info {
-  color: #118BFB;
+  color: #3974CC;
   background: #E7F3FE;
 }

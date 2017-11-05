@@ -478,11 +478,11 @@ input::-ms-reveal {
   display: none;
 }
 ::-moz-selection {
-  background: #118BFB;
+  background: #3974CC;
   color: #fff;
 }
 ::selection {
-  background: #118BFB;
+  background: #3974CC;
   color: #fff;
 }
 h1,
@@ -495,7 +495,7 @@ h6 {
   font-weight: 500;
 }
 a {
-  color: #118BFB;
+  color: #3974CC;
   background: transparent;
   text-decoration: none;
   outline: none;
@@ -509,10 +509,10 @@ a:focus {
           text-decoration-skip: ink;
 }
 a:hover {
-  color: #349CFB;
+  color: #1083EE;
 }
 a:active {
-  color: #118BFB;
+  color: #3974CC;
 }
 a:active,
 a:hover {
@@ -3066,7 +3066,7 @@ samp {
 .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
   background: #fff;
   border-color: #dddddd;
-  color: #118BFB;
+  color: #3974CC;
   padding-bottom: 5px;
 }
 .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-inactive {
@@ -3155,8 +3155,8 @@ samp {
   font-size: 14px;
 }
 .ant-tabs-extra-content .ant-tabs-new-tab:hover {
-  color: #118BFB;
-  border-color: #118BFB;
+  color: #3974CC;
+  border-color: #3974CC;
 }
 .ant-tabs-vertical.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-container {
   height: auto;
@@ -3223,7 +3223,7 @@ samp {
   bottom: 1px;
   box-sizing: border-box;
   height: 2px;
-  background-color: #118BFB;
+  background-color: #3974CC;
   -webkit-transform-origin: 0 0;
       -ms-transform-origin: 0 0;
           transform-origin: 0 0;
@@ -3405,10 +3405,10 @@ samp {
   margin-right: 0;
 }
 .ant-tabs-nav .ant-tabs-tab:hover {
-  color: #349CFB;
+  color: #1083EE;
 }
 .ant-tabs-nav .ant-tabs-tab:active {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-tabs-nav .ant-tabs-tab .anticon {
   width: 14px;
@@ -3416,7 +3416,7 @@ samp {
   margin-right: 8px;
 }
 .ant-tabs-nav .ant-tabs-tab-active {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-tabs-mini .ant-tabs-nav-container {
   font-size: 14px;
@@ -3610,7 +3610,7 @@ samp {
   border-radius: 0;
 }
 .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab:hover {
-  color: #118BFB;
+  color: #3974CC;
 }
 .ant-tabs-nav .ant-tabs-tab-disabled {
   cursor: not-allowed;
@@ -3619,7 +3619,7 @@ samp {
   padding: 8px 25px;
 }
 .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
-  color: #118BFB;
+  color: #3974CC;
   background: #FFFFFF;
 }
 .ant-tabs.ant-tabs-button > .ant-tabs-bar .ant-tabs-tab {
@@ -3637,10 +3637,10 @@ samp {
   background: #EEEEEE;
 }
 .ant-tabs.ant-tabs-button > .ant-tabs-bar .ant-tabs-tab-active {
-  border: 1px solid #118BFB;
+  border: 1px solid #3974CC;
 }
 .ant-tabs.ant-tabs-button > .ant-tabs-bar .ant-tabs-tab-active:last-child {
-  border: 1px solid #118BFB;
+  border: 1px solid #3974CC;
 }
 .ant-tabs.ant-tabs-button .ant-tabs-ink-bar-animated {
   display: none !important;

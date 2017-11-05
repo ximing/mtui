@@ -1,7 +1,7 @@
 {
     "name": "mtui-d",
-    "version": "1.4.6",
-    "description": "A new React project",
+    "version": "2.0.0",
+    "description": "mtui-d",
     "author": "",
     "main": "./lib",
     "scripts": {
