@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3161,11 +3162,7 @@ samp {
       -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   position: absolute;
-  left: 4px;
-  top: 1px;
   display: table;
-  width: 5px;
-  height: 8px;
   border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
@@ -3207,8 +3204,8 @@ samp {
   font-size: 14px;
   display: inline-block;
 }
-.ant-checkbox-wrapper:not(:last-child) {
-  margin-right: 8px;
+.ant-checkbox-wrapper + .ant-checkbox-wrapper {
+  margin-left: 8px;
 }
 .ant-checkbox-wrapper + span,
 .ant-checkbox + span {
@@ -3220,6 +3217,13 @@ samp {
 }
 .ant-checkbox-group-item {
   display: inline-block;
+  margin-right: 8px;
+}
+.ant-checkbox-group-item:last-child {
+  margin-right: 0;
+}
+.ant-checkbox-group-item + .ant-checkbox-group-item {
+  margin-left: 0;
 }
 @media \0screen {
   .ant-checkbox-checked .ant-checkbox-inner:before,

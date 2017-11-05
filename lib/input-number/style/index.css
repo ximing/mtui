@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3046,7 +3047,6 @@ samp {
   position: relative;
   padding: 4px 7px;
   width: 100%;
-  cursor: text;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
@@ -3063,14 +3063,14 @@ samp {
   width: 80px;
 }
 .ant-input-number::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
   opacity: 1;
 }
 .ant-input-number:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
 }
 .ant-input-number::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
 }
 .ant-input-number:hover {
   border-color: #49a9ee;
@@ -3093,6 +3093,8 @@ textarea.ant-input-number {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+  -webkit-transition: all .3s, height 0s;
+  transition: all .3s, height 0s;
 }
 .ant-input-number-lg {
   padding: 6px 7px;
@@ -3201,14 +3203,14 @@ textarea.ant-input-number {
   display: block;
 }
 .ant-input-number-input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
   opacity: 1;
 }
 .ant-input-number-input:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
 }
 .ant-input-number-input::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
 }
 .ant-input-number-input[disabled] {
   background-color: #f7f7f7;

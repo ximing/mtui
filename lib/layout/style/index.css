@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3083,6 +3084,7 @@ samp {
   line-height: 64px;
 }
 .ant-layout-footer {
+  background: #ececec;
   padding: 24px 50px;
   color: #333333;
   font-size: 14px;
@@ -3094,12 +3096,17 @@ samp {
           flex: auto;
 }
 .ant-layout-sider {
-  -webkit-transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all .2s;
+  transition: all .2s;
   position: relative;
   background: #404040;
   /* fix firefox can't set width smaller than content on flex item */
   min-width: 0;
+}
+.ant-layout-sider-children {
+  height: 100%;
+  padding-top: 0.1px;
+  margin-top: -0.1px;
 }
 .ant-layout-sider-has-trigger {
   padding-bottom: 48px;
@@ -3120,6 +3127,8 @@ samp {
   color: #fff;
   background: #5c5c5c;
   z-index: 1;
+  -webkit-transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-layout-sider-zero-width > * {
   overflow: hidden;

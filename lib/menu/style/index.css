@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3052,8 +3053,8 @@ samp {
   color: #333333;
   background: #fff;
   line-height: 46px;
-  -webkit-transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: background .3s, width .2s;
+  transition: background .3s, width .2s;
 }
 .ant-menu-hidden {
   display: none;
@@ -3067,6 +3068,8 @@ samp {
   font-size: 14px;
   line-height: 1.5;
   padding: 8px 16px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 .ant-menu-item,
 .ant-menu-submenu,
@@ -3215,52 +3218,6 @@ samp {
   -webkit-transform: scaleY(1);
       -ms-transform: scaleY(1);
           transform: scaleY(1);
-}
-.ant-menu-vertical.ant-menu-inline-collapsed,
-.ant-menu-inline-collapsed {
-  width: 64px;
-}
-.ant-menu-vertical.ant-menu-inline-collapsed > .ant-menu-item,
-.ant-menu-inline-collapsed > .ant-menu-item,
-.ant-menu-vertical.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title,
-.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
-  left: 0;
-  text-overflow: clip;
-  padding: 0 24px;
-}
-.ant-menu-vertical.ant-menu-inline-collapsed > .ant-menu-item:after,
-.ant-menu-inline-collapsed > .ant-menu-item:after,
-.ant-menu-vertical.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title:after,
-.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title:after {
-  display: none;
-}
-.ant-menu-vertical.ant-menu-inline-collapsed > .ant-menu-item .anticon,
-.ant-menu-inline-collapsed > .ant-menu-item .anticon,
-.ant-menu-vertical.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon,
-.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon {
-  font-size: 16px;
-  line-height: 42px;
-  margin: 0;
-}
-.ant-menu-vertical.ant-menu-inline-collapsed > .ant-menu-item .anticon + span,
-.ant-menu-inline-collapsed > .ant-menu-item .anticon + span,
-.ant-menu-vertical.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon + span,
-.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon + span {
-  max-width: 0;
-  display: inline-block;
-  opacity: 0;
-}
-.ant-menu-vertical.ant-menu-inline-collapsed-tooltip,
-.ant-menu-inline-collapsed-tooltip {
-  pointer-events: none;
-}
-.ant-menu-vertical.ant-menu-inline-collapsed-tooltip .anticon,
-.ant-menu-inline-collapsed-tooltip .anticon {
-  display: none;
-}
-.ant-menu-vertical.ant-menu-inline-collapsed-tooltip a,
-.ant-menu-inline-collapsed-tooltip a {
-  color: rgba(255, 255, 255, 0.91);
 }
 .ant-menu-submenu-horizontal > .ant-menu {
   top: 100%;
@@ -3428,6 +3385,51 @@ samp {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.ant-menu-inline-collapsed {
+  width: 64px;
+}
+.ant-menu-inline-collapsed > .ant-menu-item,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+  left: 0;
+  text-overflow: clip;
+  padding: 0 24px !important;
+}
+.ant-menu-inline-collapsed > .ant-menu-item:after,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item:after,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title:after {
+  display: none;
+}
+.ant-menu-inline-collapsed > .ant-menu-item .anticon,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .anticon,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon {
+  font-size: 16px;
+  line-height: 42px;
+  margin: 0;
+}
+.ant-menu-inline-collapsed > .ant-menu-item .anticon + span,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .anticon + span,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon + span {
+  max-width: 0;
+  display: inline-block;
+  opacity: 0;
+}
+.ant-menu-inline-collapsed-tooltip {
+  pointer-events: none;
+}
+.ant-menu-inline-collapsed-tooltip .anticon {
+  display: none;
+}
+.ant-menu-inline-collapsed-tooltip a {
+  color: rgba(255, 255, 255, 0.91);
+}
+.ant-menu-inline-collapsed .ant-menu-item-group-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 .ant-menu-item-group-list .ant-menu-item,
 .ant-menu-item-group-list .ant-menu-submenu-title {
   padding: 0 16px 0 28px;
@@ -3521,7 +3523,6 @@ samp {
 .ant-menu-dark .ant-menu-submenu-active,
 .ant-menu-dark:not(.ant-menu-inline) .ant-menu-submenu-open,
 .ant-menu-dark .ant-menu-submenu-selected,
-.ant-menu-dark .ant-menu-submenu:hover,
 .ant-menu-dark .ant-menu-submenu-title:hover {
   background-color: transparent;
   color: #fff;
@@ -3531,7 +3532,6 @@ samp {
 .ant-menu-dark .ant-menu-submenu-active > a,
 .ant-menu-dark:not(.ant-menu-inline) .ant-menu-submenu-open > a,
 .ant-menu-dark .ant-menu-submenu-selected > a,
-.ant-menu-dark .ant-menu-submenu:hover > a,
 .ant-menu-dark .ant-menu-submenu-title:hover > a {
   color: #fff;
 }

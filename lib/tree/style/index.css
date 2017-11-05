@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3161,11 +3162,7 @@ samp {
       -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   position: absolute;
-  left: 4px;
-  top: 1px;
   display: table;
-  width: 5px;
-  height: 8px;
   border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
@@ -3207,8 +3204,8 @@ samp {
   font-size: 14px;
   display: inline-block;
 }
-.ant-checkbox-wrapper:not(:last-child) {
-  margin-right: 8px;
+.ant-checkbox-wrapper + .ant-checkbox-wrapper {
+  margin-left: 8px;
 }
 .ant-checkbox-wrapper + span,
 .ant-checkbox + span {
@@ -3220,6 +3217,13 @@ samp {
 }
 .ant-checkbox-group-item {
   display: inline-block;
+  margin-right: 8px;
+}
+.ant-checkbox-group-item:last-child {
+  margin-right: 0;
+}
+.ant-checkbox-group-item + .ant-checkbox-group-item {
+  margin-left: 0;
 }
 @media \0screen {
   .ant-checkbox-checked .ant-checkbox-inner:before,
@@ -3368,11 +3372,7 @@ samp {
       -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   position: absolute;
-  left: 4px;
-  top: 1px;
   display: table;
-  width: 5px;
-  height: 8px;
   border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
@@ -3414,8 +3414,8 @@ samp {
   font-size: 12px;
   display: inline-block;
 }
-.ant-tree-checkbox-wrapper:not(:last-child) {
-  margin-right: 8px;
+.ant-tree-checkbox-wrapper + .ant-tree-checkbox-wrapper {
+  margin-left: 8px;
 }
 .ant-tree-checkbox-wrapper + span,
 .ant-tree-checkbox + span {
@@ -3427,6 +3427,13 @@ samp {
 }
 .ant-tree-checkbox-group-item {
   display: inline-block;
+  margin-right: 8px;
+}
+.ant-tree-checkbox-group-item:last-child {
+  margin-right: 0;
+}
+.ant-tree-checkbox-group-item + .ant-tree-checkbox-group-item {
+  margin-left: 0;
 }
 @media \0screen {
   .ant-tree-checkbox-checked .ant-tree-checkbox-inner:before,
@@ -3483,7 +3490,7 @@ samp {
 }
 .ant-tree li.filter-node > span {
   color: #f04134 !important;
-  font-weight: bold !important;
+  font-weight: 500 !important;
 }
 .ant-tree li ul {
   margin: 0;
@@ -3498,8 +3505,9 @@ samp {
   text-decoration: none;
   vertical-align: top;
   color: rgba(0, 0, 0, 0.65);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
 }
 .ant-tree li .ant-tree-node-content-wrapper:hover {
   background-color: #ecf6fd;
@@ -3523,6 +3531,17 @@ samp {
   cursor: pointer;
   outline: none;
   text-align: center;
+}
+.ant-tree li span.ant-tree-icon_loading {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  background: #fff;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 .ant-tree li span.ant-tree-icon_loading:after {
   display: inline-block;
@@ -3743,5 +3762,5 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
   height: 100%;
   position: absolute;
   left: 12px;
-  margin: 18px 0;
+  margin: 22px 0;
 }

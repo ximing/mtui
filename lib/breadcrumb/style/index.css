@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3055,7 +3056,7 @@ samp {
   color: #49a9ee;
 }
 .ant-breadcrumb > span:last-child {
-  font-weight: bold;
+  font-weight: 500;
   color: rgba(0, 0, 0, 0.65);
 }
 .ant-breadcrumb > span:last-child .ant-breadcrumb-separator {

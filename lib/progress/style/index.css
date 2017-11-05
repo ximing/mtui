@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3072,6 +3073,8 @@ samp {
 }
 .ant-progress-circle-path {
   stroke: #108ee9;
+  -webkit-animation: ant-progress-appear 0.3s;
+          animation: ant-progress-appear 0.3s;
 }
 .ant-progress-bg {
   border-radius: 100px;
@@ -3149,6 +3152,22 @@ samp {
 }
 .ant-progress-circle .ant-progress-status-success .ant-progress-text {
   color: #00a854;
+}
+@-webkit-keyframes ant-progress-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ant-progress-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @-webkit-keyframes ant-progress-active {
   0% {

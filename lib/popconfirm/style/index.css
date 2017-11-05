@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3207,6 +3208,10 @@ samp {
 .ant-btn.active {
   background: #fff;
 }
+.ant-btn > i,
+.ant-btn > span {
+  pointer-events: none;
+}
 .ant-btn-primary {
   color: #fff;
   background-color: #3974CC;
@@ -3680,18 +3685,18 @@ samp {
 .ant-btn.ant-btn-loading:before {
   display: block;
 }
-.ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) {
+.ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline):not(.ant-btn-icon-only) {
   padding-left: 29px;
   pointer-events: none;
   position: relative;
 }
-.ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) .anticon {
+.ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline):not(.ant-btn-icon-only) .anticon {
   margin-left: -14px;
 }
-.ant-btn-sm.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) {
+.ant-btn-sm.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline):not(.ant-btn-icon-only) {
   padding-left: 24px;
 }
-.ant-btn-sm.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) .anticon {
+.ant-btn-sm.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline):not(.ant-btn-icon-only) .anticon {
   margin-left: -17px;
 }
 .ant-btn-group {
@@ -4384,9 +4389,8 @@ samp {
 .ant-popover-title {
   min-width: 177px;
   margin: 0;
-  padding: 0 16px;
-  line-height: 32px;
-  height: 32px;
+  padding: 8px 16px;
+  min-height: 32px;
   border-bottom: 1px solid #dddddd;
   color: #333333;
   font-weight: 500;
@@ -4699,6 +4703,10 @@ samp {
 .ant-btn:active,
 .ant-btn.active {
   background: #fff;
+}
+.ant-btn > i,
+.ant-btn > span {
+  pointer-events: none;
 }
 .ant-btn-primary {
   color: #fff;
@@ -5173,18 +5181,18 @@ samp {
 .ant-btn.ant-btn-loading:before {
   display: block;
 }
-.ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) {
+.ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline):not(.ant-btn-icon-only) {
   padding-left: 29px;
   pointer-events: none;
   position: relative;
 }
-.ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) .anticon {
+.ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline):not(.ant-btn-icon-only) .anticon {
   margin-left: -14px;
 }
-.ant-btn-sm.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) {
+.ant-btn-sm.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline):not(.ant-btn-icon-only) {
   padding-left: 24px;
 }
-.ant-btn-sm.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) .anticon {
+.ant-btn-sm.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline):not(.ant-btn-icon-only) .anticon {
   margin-left: -17px;
 }
 .ant-btn-group {
@@ -5877,9 +5885,8 @@ samp {
 .ant-popover-title {
   min-width: 177px;
   margin: 0;
-  padding: 0 16px;
-  line-height: 32px;
-  height: 32px;
+  padding: 8px 16px;
+  min-height: 32px;
   border-bottom: 1px solid #e9e9e9;
   color: rgba(0, 0, 0, 0.65);
   font-weight: 500;

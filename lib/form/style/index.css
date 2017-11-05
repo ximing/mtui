@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3129,7 +3130,7 @@ input[type="checkbox"].disabled {
   color: rgba(0, 0, 0, 0.65);
   vertical-align: top;
 }
-.ant-form-item > .ant-form-item,
+.ant-form-item > .ant-form-item:last-child,
 .ant-form-item :not(.ant-form) > .ant-form-item {
   margin-bottom: -24px;
 }
@@ -3206,13 +3207,18 @@ form .has-feedback :not(.ant-input-group-addon) > .ant-select .ant-select-select
   padding-right: 42px;
 }
 form .has-feedback .ant-cascader-picker-arrow {
-  padding-right: 36px;
+  margin-right: 21px;
 }
 form .has-feedback .ant-cascader-picker-clear {
   right: 28px;
 }
+form .has-feedback .ant-input-search .ant-input-suffix {
+  right: 28px;
+}
 form .has-feedback .ant-calendar-picker-icon,
-form .has-feedback .ant-calendar-picker-clear {
+form .has-feedback .ant-time-picker-icon,
+form .has-feedback .ant-calendar-picker-clear,
+form .has-feedback .ant-time-picker-clear {
   right: 28px;
 }
 form textarea.ant-input {
@@ -3291,6 +3297,7 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
 .ant-col-24.ant-form-item-label,
 .ant-col-xl-24.ant-form-item-label {
   padding: 0 0 8px;
+  margin: 0;
   display: block;
   text-align: left;
   line-height: 1.5;
@@ -3303,6 +3310,7 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
 @media (max-width: 767px) {
   .ant-col-xs-24.ant-form-item-label {
     padding: 0 0 8px;
+    margin: 0;
     display: block;
     text-align: left;
     line-height: 1.5;
@@ -3314,6 +3322,7 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
 @media (max-width: 991px) {
   .ant-col-sm-24.ant-form-item-label {
     padding: 0 0 8px;
+    margin: 0;
     display: block;
     text-align: left;
     line-height: 1.5;
@@ -3325,6 +3334,7 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
 @media (max-width: 1199px) {
   .ant-col-md-24.ant-form-item-label {
     padding: 0 0 8px;
+    margin: 0;
     display: block;
     text-align: left;
     line-height: 1.5;
@@ -3336,6 +3346,7 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
 @media (max-width: 1599px) {
   .ant-col-lg-24.ant-form-item-label {
     padding: 0 0 8px;
+    margin: 0;
     display: block;
     text-align: left;
     line-height: 1.5;
@@ -3450,6 +3461,7 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
   box-shadow: 0 0 0 2px rgba(255, 191, 0, 0.2);
 }
 .has-warning .ant-calendar-picker-icon:after,
+.has-warning .ant-time-picker-icon:after,
 .has-warning .ant-picker-icon:after,
 .has-warning .ant-select-arrow,
 .has-warning .ant-cascader-picker-arrow {
@@ -3470,6 +3482,11 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
 .has-warning .ant-input-number:not([disabled]):hover,
 .has-warning .ant-time-picker-input:not([disabled]):hover {
   border-color: #ffbf00;
+}
+.has-warning .ant-cascader-picker:focus .ant-cascader-input {
+  border-color: #ffce3d;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(255, 191, 0, 0.2);
 }
 .has-error .ant-form-explain,
 .has-error .ant-form-split {
@@ -3521,6 +3538,7 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
   box-shadow: none;
 }
 .has-error .ant-calendar-picker-icon:after,
+.has-error .ant-time-picker-icon:after,
 .has-error .ant-picker-icon:after,
 .has-error .ant-select-arrow,
 .has-error .ant-cascader-picker-arrow {
@@ -3546,8 +3564,13 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
 .has-error .ant-mention-wrapper .ant-mention-editor:not([disabled]):hover {
   border-color: #f04134;
 }
-.has-error .ant-mention-wrapper.ant-mention-active .ant-mention-editor,
+.has-error .ant-mention-wrapper.ant-mention-active:not([disabled]) .ant-mention-editor,
 .has-error .ant-mention-wrapper .ant-mention-editor:not([disabled]):focus {
+  border-color: #f46e65;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(240, 65, 52, 0.2);
+}
+.has-error .ant-cascader-picker:focus .ant-cascader-input {
   border-color: #f46e65;
   outline: 0;
   box-shadow: 0 0 0 2px rgba(240, 65, 52, 0.2);

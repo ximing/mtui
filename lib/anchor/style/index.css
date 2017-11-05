@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3088,10 +3089,6 @@ samp {
   padding: 8px 0 8px 18px;
   line-height: 1;
 }
-.ant-anchor-link .ant-anchor-link {
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
 .ant-anchor-link-title {
   display: block;
   position: relative;
@@ -3109,6 +3106,7 @@ samp {
 .ant-anchor-link-active > .ant-anchor-link-title {
   color: #108ee9;
 }
-.ant-anchor-link > .ant-anchor-link {
-  font-size: 12px;
+.ant-anchor-link .ant-anchor-link {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }

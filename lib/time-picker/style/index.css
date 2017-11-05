@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3337,7 +3338,6 @@ samp {
   padding: 8px 10px;
   width: 100%;
   height: 36px;
-  cursor: text;
   font-size: 14px;
   line-height: 1.5;
   color: #333333;
@@ -3381,6 +3381,8 @@ textarea.ant-input {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+  -webkit-transition: all .3s, height 0s;
+  transition: all .3s, height 0s;
 }
 .ant-input-lg {
   padding: 8px 10px;
@@ -3525,6 +3527,21 @@ textarea.ant-input {
   width: 100%;
   float: left;
 }
+.ant-input-group.ant-input-group-compact {
+  display: block;
+  zoom: 1;
+}
+.ant-input-group.ant-input-group-compact:before,
+.ant-input-group.ant-input-group-compact:after {
+  content: " ";
+  display: table;
+}
+.ant-input-group.ant-input-group-compact:after {
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
 .ant-input-group.ant-input-group-compact > * {
   border-radius: 0;
   border-right-width: 0;
@@ -3569,6 +3586,7 @@ textarea.ant-input {
 .ant-input-group-wrapper {
   display: inline-block;
   vertical-align: top;
+  width: 100%;
 }
 .ant-input-affix-wrapper {
   position: relative;
@@ -3644,14 +3662,14 @@ textarea.ant-input {
   outline: 0;
 }
 .ant-time-picker-panel-input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
   opacity: 1;
 }
 .ant-time-picker-panel-input:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
 }
 .ant-time-picker-panel-input::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
 }
 .ant-time-picker-panel-input-wrap {
   box-sizing: border-box;
@@ -3815,7 +3833,6 @@ li.ant-time-picker-panel-select-option-disabled:hover {
   padding: 4px 7px;
   width: 100%;
   height: 28px;
-  cursor: text;
   font-size: 12px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
@@ -3827,14 +3844,14 @@ li.ant-time-picker-panel-select-option-disabled:hover {
   transition: all .3s;
 }
 .ant-time-picker-input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
   opacity: 1;
 }
 .ant-time-picker-input:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
 }
 .ant-time-picker-input::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
+  color: #bfbfbf;
 }
 .ant-time-picker-input:hover {
   border-color: #49a9ee;
@@ -3857,6 +3874,8 @@ textarea.ant-time-picker-input {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+  -webkit-transition: all .3s, height 0s;
+  transition: all .3s, height 0s;
 }
 .ant-time-picker-input-lg {
   padding: 6px 7px;
@@ -3894,7 +3913,7 @@ textarea.ant-time-picker-input {
           user-select: none;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  width: 12px;
+  width: 14px;
   height: 12px;
   line-height: 12px;
   right: 8px;

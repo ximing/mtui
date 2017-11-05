@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3086,7 +3087,7 @@ samp {
   display: inline-block;
   font-weight: bold;
   line-height: 40px;
-  vertical-align: middle;
+  vertical-align: top;
   -webkit-transition: -webkit-transform 0.24s;
   transition: -webkit-transform 0.24s;
   transition: transform 0.24s;
@@ -3149,6 +3150,10 @@ samp {
 .ant-collapse-borderless {
   background-color: #fff;
   border: 0;
+}
+.ant-collapse-borderless > .ant-collapse-item:last-child,
+.ant-collapse-borderless > .ant-collapse-item:last-child .ant-collapse-header {
+  border-radius: 0;
 }
 .ant-collapse-borderless > .ant-collapse-item-active {
   border: 0;

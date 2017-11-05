@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3066,6 +3067,7 @@ samp {
   right: 8px;
   line-height: 1;
   margin-top: -6px;
+  color: #666666;
   display: inline-block;
   font-size: 14px;
   font-size: 9px \9;
@@ -3273,6 +3275,13 @@ samp {
 .ant-select-search__field__placeholder {
   left: 8px;
 }
+.ant-select-search__field__mirror {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  white-space: pre;
+  pointer-events: none;
+}
 .ant-select-search--inline {
   position: absolute;
   height: 100%;
@@ -3294,13 +3303,7 @@ samp {
   background: transparent;
   outline: 0;
   border-radius: 2px;
-}
-.ant-select-search--inline .ant-select-search__field__mirror {
-  position: absolute;
-  top: 0;
-  left: -9999px;
-  white-space: pre;
-  pointer-events: none;
+  line-height: 1;
 }
 .ant-select-search--inline > i {
   float: right;
@@ -3520,13 +3523,11 @@ samp {
   white-space: nowrap;
   cursor: pointer;
   overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
 .ant-select-dropdown-menu-item:hover {
-  background-color: #E7F3FE;
-}
-.ant-select-dropdown-menu-item-active {
   background-color: #E7F3FE;
 }
 .ant-select-dropdown-menu-item-disabled {
@@ -3541,8 +3542,11 @@ samp {
 .ant-select-dropdown-menu-item-selected,
 .ant-select-dropdown-menu-item-selected:hover {
   background-color: #F8F8F8;
-  font-weight: bold;
+  font-weight: 600;
   color: #333333;
+}
+.ant-select-dropdown-menu-item-active {
+  background-color: #E7F3FE;
 }
 .ant-select-dropdown-menu-item-divider {
   height: 1px;
@@ -3924,7 +3928,6 @@ samp {
   padding: 8px 10px;
   width: 100%;
   height: 36px;
-  cursor: text;
   font-size: 14px;
   line-height: 1.5;
   color: #333333;
@@ -3968,6 +3971,8 @@ textarea.ant-input {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+  -webkit-transition: all .3s, height 0s;
+  transition: all .3s, height 0s;
 }
 .ant-input-lg {
   padding: 8px 10px;
@@ -4112,6 +4117,21 @@ textarea.ant-input {
   width: 100%;
   float: left;
 }
+.ant-input-group.ant-input-group-compact {
+  display: block;
+  zoom: 1;
+}
+.ant-input-group.ant-input-group-compact:before,
+.ant-input-group.ant-input-group-compact:after {
+  content: " ";
+  display: table;
+}
+.ant-input-group.ant-input-group-compact:after {
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
 .ant-input-group.ant-input-group-compact > * {
   border-radius: 0;
   border-right-width: 0;
@@ -4156,6 +4176,7 @@ textarea.ant-input {
 .ant-input-group-wrapper {
   display: inline-block;
   vertical-align: top;
+  width: 100%;
 }
 .ant-input-affix-wrapper {
   position: relative;

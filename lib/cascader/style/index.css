@@ -468,6 +468,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  -webkit-appearance: none;
 }
 ul,
 ol {
@@ -3337,7 +3338,6 @@ samp {
   padding: 8px 10px;
   width: 100%;
   height: 36px;
-  cursor: text;
   font-size: 14px;
   line-height: 1.5;
   color: #333333;
@@ -3381,6 +3381,8 @@ textarea.ant-input {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+  -webkit-transition: all .3s, height 0s;
+  transition: all .3s, height 0s;
 }
 .ant-input-lg {
   padding: 8px 10px;
@@ -3525,6 +3527,21 @@ textarea.ant-input {
   width: 100%;
   float: left;
 }
+.ant-input-group.ant-input-group-compact {
+  display: block;
+  zoom: 1;
+}
+.ant-input-group.ant-input-group-compact:before,
+.ant-input-group.ant-input-group-compact:after {
+  content: " ";
+  display: table;
+}
+.ant-input-group.ant-input-group-compact:after {
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
 .ant-input-group.ant-input-group-compact > * {
   border-radius: 0;
   border-right-width: 0;
@@ -3569,6 +3586,7 @@ textarea.ant-input {
 .ant-input-group-wrapper {
   display: inline-block;
   vertical-align: top;
+  width: 100%;
 }
 .ant-input-affix-wrapper {
   position: relative;
@@ -3800,10 +3818,11 @@ textarea.ant-input {
 .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
 .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
   background: #f7f7f7;
-  font-weight: bold;
+  font-weight: 600;
 }
 .ant-cascader-menu-item-expand {
   position: relative;
+  padding-right: 24px;
 }
 .ant-cascader-menu-item-expand:after {
   font-family: 'anticon';
