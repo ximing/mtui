@@ -468,6 +468,9 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+}
+input[type="text"],
+textarea {
   -webkit-appearance: none;
 }
 ul,
@@ -3545,7 +3548,7 @@ textarea.ant-input {
 .ant-input-group.ant-input-group-compact > * {
   border-radius: 0;
   border-right-width: 0;
-  vertical-align: middle;
+  vertical-align: top;
   float: none;
   display: inline-block;
 }

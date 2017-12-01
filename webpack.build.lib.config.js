@@ -3,18 +3,20 @@
  */
 'use strict';
 const {
-    resolve,join
+    resolve, join
 } = require('path');
 const webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var node_modules = resolve(__dirname, 'node_modules');
 var fs = require('fs');
-function getDirectories (srcpath) {
+
+function getDirectories(srcpath) {
     return fs.readdirSync(srcpath)
         .filter(file => fs.statSync(join(srcpath, file)).isDirectory())
 }
+
 let entry = {};
-getDirectories('./src-lib').forEach(item=>{
+getDirectories('./src-lib').forEach(item => {
     // entry[`${item}/style/index.css`] = `./src-lib/${item}/style/index.less`;
     entry[`${item}/style/index.css`] = `./src-lib/${item}/style/index.js`;
 })
@@ -37,7 +39,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                use:[{
+                use: [{
                     loader: 'babel-loader',
                     options: {
                         'presets': [
@@ -58,10 +60,10 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test:/\.css$/,
+                test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    use: ['css-loader','postcss-loader']
+                    use: ['css-loader', 'postcss-loader']
                 })
             },
             {
@@ -95,7 +97,7 @@ module.exports = {
                 commonjs: 'react',
                 amd: 'react'
             },
-            'react-dom':{
+            'react-dom': {
                 root: 'ReactDOM',
                 commonjs2: 'react-dom',
                 commonjs: 'react-dom',
@@ -113,5 +115,13 @@ module.exports = {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            },
+            output: {
+                comments: false
+            }
+        })
     ]
 };
